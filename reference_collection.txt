@@ -1,2 +1,27 @@
 <element name=""
+                #Add name
 type=""
+                #magic item
+                #Weapon
+                #Weapon Property
+                #Archetype
+                #Archetype Feature
+                #item
+source=""
+                #TBD
+id="ID_{AUTHOR}_{SOURCE}_{TYPE}_{NAME}">
+<supports></supports>   (Armor)
+                #ID_INTERNAL_ARMOR_GROUP_LIGHT
+<description><p></p></description>
+                #Style Options Avaible
+<setters>
+    <set name="category"></set>
+    <set name="cost" currency=""></set>
+    <set name="weight" lb=""></set>
+    <set name="slot"></set>
+    <set name="armor"></set> (Armor)
+    <set name="armorClass"></set>
+    <set name="stealth"></set>
+    <set name="proficiency"></set>
+</setters>
+<rules></rules>
