@@ -7,11 +7,13 @@ type=""
                 #Archetype
                 #Archetype Feature
                 #item
+                #Option
 source=""
                 #TBD
 id="ID_{AUTHOR}_{SOURCE}_{TYPE}_{NAME}">
-<supports></supports>   (Armor)
+<supports></supports>   (Armor, Weapon)
                 #ID_INTERNAL_ARMOR_GROUP_LIGHT
+                #>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE   #TBD look up if in doc
 <description><p></p></description>
                 #Style Options Avaible
 <setters>
@@ -55,41 +57,71 @@ id="ID_{AUTHOR}_{SOURCE}_{TYPE}_{NAME}">
     <set name="cost" currency=""></set>
                 #currency gp,cp and so on
     <set name="weight" lb=""></set>
+    <set name=container"></set>
+                #Arcane Focus
+                #Druidic Focus
+                #Holy Symbol
     <set name="slot"></set>
                 #body
                 #onehand,secondary
                 #onehand
+    <set name="range">xx/xx>set> #if applicable
+    <set name="damage" type="">xdx+x</set>
+                #piercing
+                #bludgeoning
+                #slashing
     <set name="type"></set>
                 #Shield
                 #Staff
                 #Potion
                 #Scroll
                 #Ammunition
+                #Mount
+                #Tool
     <set name="attunement" addition="#by a cleric, druid, ...">true</set>  (Staffs,)
     <set name="rarity"></set>
                 #Common
                 #Uncommon
                 #Rare
-    <set name="weapon"></set>
+                #Very Rare
+                #Legendary
+    <set name="enhancement">[1-3]</set>                 (used in upgrades Weapon+1)
+    <set name="weapon" addition="">..||..</set>                           (Weapon)
+                Set-Atttribute:
+                #javelin
+                #any sword
+                Tags:
                 #Quarterstaff
-                #
-    <set name="armor"></set> (Armor, )
+                #appears to be optional?
+                #ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE   #same as in Line16
+                #ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED
+    <set name="armor"></set>                            (Armor, )
                 #Shield
                 #Heavy
                 #Medium
                 #Light
+                #for Add Improv:ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|...
     <set name="armorClass"></set>
                 #xx + Dex modifier (max x)
                 #xx
                 #+x                                     (Shield)
+    <set name="name-format"></set>                      (Stacked Names)
+                #{{parent}} +{{enhancement}}
     <set name="stealth"></set>                          (Shield)
                 #Disadvantage
                 #don't use Set if no Change
-    <set name="proficiency"></set>                      (Shield)
-                #ID_PROFICIENCY_ARMOR_PROFICIENCY_Name
+    <set name="proficiency"></set>                      (Shield, Weapons, Tools)
+                #ID_PROFICIENCY_Category_PROFICIENCY_Name
     <set name="charges">XX</set>                        (Staffs)
-
+    <set name="short"></set>                            (Option)
+                #description
+    <set name="stackable">true</set>                    
+                #Optional if Ress stackable
 </setters>
+<extract>
+    <item></item> #List of Item IDs
+</extract>
 <rules></rules>
                 #Stats, TBD (see Doc)
                 #Grants, TBD (see Doc)
+                #for Add. Improv: <stat name="ac:armored:enhancement" value="2" bonus="enhancement" />
