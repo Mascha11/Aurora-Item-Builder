@@ -15,13 +15,81 @@ id="ID_{AUTHOR}_{SOURCE}_{TYPE}_{NAME}">
 <description><p></p></description>
                 #Style Options Avaible
 <setters>
+    <set name="keywords"></set>
+                #Keywords for Search
     <set name="category"></set>
+                #Adventuring Gear
+                #Treasure
+                #Equipment Packs
+                #Tools
+                #Musical Instruments
+                #Armor
+                #Magic Armor
+                #Weapons
+                #Magic Weapons
+                #Ammunition
+                #Spellcasting Focus
+                #Wondrous Items
+                #Supernatural Gifts
+                #Staffs
+                #Rods
+                #Wands
+                #Rings
+                #Potions
+                #Poison
+                #Scrolls
+                #Spell Scrolls
+                #Explosives
+                #Mounts & Vehicles
+                #Optional Class Feature
+                #Alchemical Formulas
+                #Whetstones
+                #Reagents
+                #Additional Feature
+                #Additional Ability Score Improvement
+                #Additional Feature
+                #Additional Language
+                #Additional Proficiency
+                #Additional Spell
+                #Additional Ranger Spell
     <set name="cost" currency=""></set>
+                #currency gp,cp and so on
     <set name="weight" lb=""></set>
     <set name="slot"></set>
-    <set name="armor"></set> (Armor)
+                #body
+                #onehand,secondary
+                #onehand
+    <set name="type"></set>
+                #Shield
+                #Staff
+                #Potion
+                #Scroll
+                #Ammunition
+    <set name="attunement" addition="#by a cleric, druid, ...">true</set>  (Staffs,)
+    <set name="rarity"></set>
+                #Common
+                #Uncommon
+                #Rare
+    <set name="weapon"></set>
+                #Quarterstaff
+                #
+    <set name="armor"></set> (Armor, )
+                #Shield
+                #Heavy
+                #Medium
+                #Light
     <set name="armorClass"></set>
-    <set name="stealth"></set>
-    <set name="proficiency"></set>
+                #xx + Dex modifier (max x)
+                #xx
+                #+x                                     (Shield)
+    <set name="stealth"></set>                          (Shield)
+                #Disadvantage
+                #don't use Set if no Change
+    <set name="proficiency"></set>                      (Shield)
+                #ID_PROFICIENCY_ARMOR_PROFICIENCY_Name
+    <set name="charges">XX</set>                        (Staffs)
+
 </setters>
 <rules></rules>
+                #Stats, TBD (see Doc)
+                #Grants, TBD (see Doc)
