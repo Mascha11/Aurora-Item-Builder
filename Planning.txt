@@ -9,7 +9,7 @@ Field 3:
 Field 4:
     Author: Textinput                                               author
 (Field 5):
-    ((Supports?!?)): Prop. Contextmenu
+    ((Supports?!?)): Prop. Contextmenu                      Add Later
 Field 6:
     description: Either simple textinput or even texteditor         description
 

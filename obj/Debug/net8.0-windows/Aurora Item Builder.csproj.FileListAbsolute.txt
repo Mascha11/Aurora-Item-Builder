@@ -1,0 +1,17 @@
+W:\aktive Projekte\Programmieren\Aurora Item Builder\bin\Debug\net8.0-windows\Aurora Item Builder.exe
+W:\aktive Projekte\Programmieren\Aurora Item Builder\bin\Debug\net8.0-windows\Aurora Item Builder.deps.json
+W:\aktive Projekte\Programmieren\Aurora Item Builder\bin\Debug\net8.0-windows\Aurora Item Builder.runtimeconfig.json
+W:\aktive Projekte\Programmieren\Aurora Item Builder\bin\Debug\net8.0-windows\Aurora Item Builder.dll
+W:\aktive Projekte\Programmieren\Aurora Item Builder\bin\Debug\net8.0-windows\Aurora Item Builder.pdb
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora_Item_Builder.Form1.resources
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.csproj.GenerateResource.cache
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.GeneratedMSBuildEditorConfig.editorconfig
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.AssemblyInfoInputs.cache
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.AssemblyInfo.cs
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.csproj.CoreCompileInputs.cache
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.sourcelink.json
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.dll
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\refint\Aurora Item Builder.dll
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.pdb
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\Aurora Item Builder.genruntimeconfig.cache
+W:\aktive Projekte\Programmieren\Aurora Item Builder\obj\Debug\net8.0-windows\ref\Aurora Item Builder.dll

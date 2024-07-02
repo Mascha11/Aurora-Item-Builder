@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\reference_collection.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:reference_collection.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\planning.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:planning.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T19:29:38.768Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAIwLYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T20:22:27.896Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Entwurf]",
+              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs [Entwurf]",
+              "RelativeToolTip": "Form1.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T19:11:02.552Z",
+              "EditorCaption": " [Entwurf]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "reference_collection.txt",
+              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\reference_collection.txt",
+              "RelativeDocumentMoniker": "reference_collection.txt",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\reference_collection.txt",
+              "RelativeToolTip": "reference_collection.txt",
+              "ViewState": "AQIAABkAAAAA6P////8AwBsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-07-02T19:32:10.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Planning.txt",
+              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning.txt",
+              "RelativeDocumentMoniker": "Planning.txt",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning.txt",
+              "RelativeToolTip": "Planning.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-07-02T19:28:49.479Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
