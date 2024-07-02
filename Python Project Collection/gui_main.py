@@ -6,12 +6,16 @@ def save_input():
     type = Field2.get()
     source = Field3.get()
     author = Field4.get()
+    description = Field6.get()
+    category = Field8.get()
+    cost = Field9.get()
+    currency = Field10.get()
     user_number = number_spinbox.get()
     
     checkboxes = [chk1_var.get(), chk2_var.get(), chk3_var.get()]
     menu_choice = submenu_var.get()
     
-    output = (
+    output = ( #edit later
         f"Text: {name}\n"
         f"Number: {user_number}\n"
         f"Option: {type}\n"
@@ -58,8 +62,8 @@ Field1.pack(pady=5)
 options = ["Item", "Magic Item", "Weapon", "Magic Weapon"]
 Field2 = tk.StringVar(value=options[0])
 tk.Label(root, text="Choose a Type:").pack(pady=5)
-option_menu = ttk.OptionMenu(root, Field2, options[0], *options, command=update_submenu)  #need later for category
-option_menu.pack(pady=5)
+c = ttk.OptionMenu(root, Field2, options[0], *options)  #need later for category
+c.pack(pady=5)
 
 # Create Source Text Field
 tk.Label(root, text="Enter Source (Book).").pack(pady=5)
@@ -70,6 +74,45 @@ Field3.pack(pady=5)
 tk.Label(root, text="Enter Author").pack(pady=5)
 Field4 = tk.Entry(root, width=50)
 Field4.pack(pady=5)
+
+# Create Description Text Field
+tk.Label(root, text="Enter Description").pack(pady=5)
+Field6 = tk.Text(root, height=10, width=50)
+Field6.pack(pady=5)
+
+# Create Category menu
+options = [ "Adventuring Gear", "Treasure", "Equipment Packs", "Tools", "Musical Instruments", "Armor", "Magic Armor",
+    "Weapons", "Magic Weapons", "Ammunition", "Spellcasting Focus", "Wondrous Items", "Supernatural Gifts", "Staffs",
+    "Rods", "Wands", "Rings", "Potions", "Poison", "Scrolls", "Spell Scrolls", "Explosives", "Mounts & Vehicles", 
+    "Optional Class Feature", "Alchemical Formulas", "Whetstones", "Reagents", "Additional Feature", "Additional Ability Score Improvement",
+    "Additional Feature", "Additional Language", "Additional Proficiency", "Additional Spell", "Additional Ranger Spell"]
+Field8 = tk.StringVar(value=options[0])
+tk.Label(root, text="Choose a Type:").pack(pady=5)
+c = ttk.OptionMenu(root, Field8, options[0], *options, command=update_submenu)  #need later for category
+c.pack(pady=5)
+
+# Frame for organizing widgets
+frame = ttk.Frame(root)
+frame.pack(padx=10, pady=10)
+
+# Cost Entry setup
+cost_label = ttk.Label(frame, text="Cost:")
+cost_label.pack(side=tk.LEFT, padx=10, pady=10)
+
+Field9 = ttk.Entry(frame, width=10)
+Field9.pack(side=tk.LEFT, padx=10, pady=10)
+
+# Currency Selection setup
+currency_label = ttk.Label(frame, text="Currency:")
+currency_label.pack(side=tk.LEFT, padx=10, pady=10)
+
+currencies = ["CP", "CP", "SP", "GP", "EP", "PP"]
+Field10 = tk.StringVar(root)
+Field10.set(currencies[0])  # Set default value
+
+currency_menu = ttk.OptionMenu(frame, Field10, *currencies)
+currency_menu.pack(side=tk.LEFT, padx=10, pady=10)
+
 
 # Create number input
 tk.Label(root, text="Enter a number:").pack(pady=5)
