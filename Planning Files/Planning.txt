@@ -43,30 +43,30 @@ Field 22:
     rarity: contextmenu                                             rarity
 Field 23:
     enhancement: contextmenu                                        enhancement
-Field 24:
+(Field 24:)    optional To Do Later
     weapon: attribute: contextmenu                                  weapon_attribute
-Field 25:
-    weapon: Tags: contextmenu multiple                              weapon_tags
+Field 25(+25A):
+    weapon: Tags: contextmenu multiple                             weapon_tags
 Field 26:
     armor: contextmenu                                              armor_type
 Field 27:
     armor: ModifierArmor: multiple choice                           armor_mod
-Field 28:
+Field 28+29+30+31:
     armor Class:    if armor_type=Shield +...                       armor_class                   
                     else numberinput+contextmenu Modifier           
-Field 29+30:
+Field 32+33:
     name format: context+freeInput                                  name_format
-Field 31:
-    armor stealth tickbox for DisAdv or Context for Dis and Adv     armor_stealth
-(Field 32):
-    proficiency: prop automatically from Category+name              (proficiency)
-Field 33:
-    charges: Number                                                 charges
 Field 34:
-    description: if type=option                                     description
-Field 35:
-    stackable: tickbox                                              stackable
+    armor stealth tickbox for DisAdv or Context for Dis and Adv     armor_stealth
+(Field 35):
+    proficiency: prop automatically from Category+name              (proficiency)
 Field 36:
-    extract: only if Pack multiple choice maybe                     extract
+    charges: Number                                                 charges
 Field 37:
+    description: if type=option                                     description
+Field 38:
+    stackable: tickbox                                              stackable
+Field 39:
+    extract: only if Pack multiple choice maybe                     extract
+Field 40:
     Rules: TBD

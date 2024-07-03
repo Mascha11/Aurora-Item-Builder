@@ -28,9 +28,19 @@ namespace Aurora_Item_Builder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             //MessageBox.Show(selectedItem.ToString());
 
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip2_Popup(object sender, PopupEventArgs e)
+        {
 
         }
     }
