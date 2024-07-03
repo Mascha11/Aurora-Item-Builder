@@ -62,11 +62,11 @@ Field 34:
     proficiency: prop automatically from Category+name              (proficiency)
 Field 36:
     charges: Number                                                 charges
-Field 37:
+(Field 37:)  #add options later
     description: if type=option                                     description
 Field 38:
     stackable: tickbox                                              stackable
-Field 39:
+(Field 39:) #add Packs Way Later
     extract: only if Pack multiple choice maybe                     extract
 Field 40:
     Rules: TBD
