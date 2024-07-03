@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Aurora_Item_Builder
 {
     public partial class Form1 : Form
@@ -42,6 +44,17 @@ namespace Aurora_Item_Builder
         private void toolTip2_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+
+        private void Field27_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddRuleToList_Click(object sender, EventArgs e)
+        {
+            var RuleTemp = Field40.SelectedItem;
+            RulesList.Items.Add(RuleTemp);
         }
     }
 }
