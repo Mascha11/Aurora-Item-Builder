@@ -39,7 +39,7 @@
             Field10 = new ComboBox();
             Field11 = new NumericUpDown();
             toolTip1 = new ToolTip(components);
-            button1 = new Button();
+            Generate = new Button();
             Field12 = new ComboBox();
             Field13 = new CheckedListBox();
             label1 = new Label();
@@ -87,11 +87,7 @@
             checkCharges = new CheckBox();
             Field36 = new NumericUpDown();
             Field38 = new CheckBox();
-            Field40 = new ComboBox();
-            label16 = new Label();
-            AddRuleToList = new Button();
-            RulesList = new CheckedListBox();
-            RemoveRules = new Button();
+            richTextBox1 = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)Field9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Field11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Field14).BeginInit();
@@ -187,15 +183,15 @@
             // 
             toolTip1.ToolTipTitle = "Weight in lb";
             // 
-            // button1
+            // Generate
             // 
-            button1.Location = new Point(1155, 1223);
-            button1.Name = "button1";
-            button1.Size = new Size(233, 40);
-            button1.TabIndex = 11;
-            button1.Text = "Generate Element";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            Generate.Location = new Point(1155, 906);
+            Generate.Name = "Generate";
+            Generate.Size = new Size(233, 40);
+            Generate.TabIndex = 11;
+            Generate.Text = "Generate Element";
+            Generate.UseVisualStyleBackColor = true;
+            Generate.Click += button1_Click;
             // 
             // Field12
             // 
@@ -448,6 +444,7 @@
             AddImprovement.TabIndex = 42;
             AddImprovement.Text = "Improvement?";
             AddImprovement.UseVisualStyleBackColor = true;
+            AddImprovement.CheckedChanged += AddImprovement_CheckedChanged;
             // 
             // Field27
             // 
@@ -457,6 +454,7 @@
             Field27.Name = "Field27";
             Field27.Size = new Size(516, 132);
             Field27.TabIndex = 43;
+            Field27.Visible = false;
             Field27.SelectedIndexChanged += Field27_SelectedIndexChanged;
             // 
             // label13
@@ -607,7 +605,6 @@
             Field36.Name = "Field36";
             Field36.Size = new Size(71, 35);
             Field36.TabIndex = 59;
-            Field36.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // Field38
             // 
@@ -619,60 +616,20 @@
             Field38.Text = "stackable Item?";
             Field38.UseVisualStyleBackColor = true;
             // 
-            // Field40
+            // richTextBox1
             // 
-            Field40.FormattingEnabled = true;
-            Field40.Location = new Point(12, 1015);
-            Field40.Name = "Field40";
-            Field40.Size = new Size(407, 38);
-            Field40.TabIndex = 61;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Location = new Point(160, 972);
-            label16.Name = "label16";
-            label16.Size = new Size(164, 30);
-            label16.TabIndex = 62;
-            label16.Text = "Rules for Aurora";
-            // 
-            // AddRuleToList
-            // 
-            AddRuleToList.Location = new Point(12, 1059);
-            AddRuleToList.Name = "AddRuleToList";
-            AddRuleToList.Size = new Size(204, 40);
-            AddRuleToList.TabIndex = 63;
-            AddRuleToList.Text = "Add Selected";
-            AddRuleToList.UseVisualStyleBackColor = true;
-            AddRuleToList.Click += AddRuleToList_Click;
-            // 
-            // RulesList
-            // 
-            RulesList.FormattingEnabled = true;
-            RulesList.Location = new Point(444, 1015);
-            RulesList.Name = "RulesList";
-            RulesList.Size = new Size(210, 164);
-            RulesList.TabIndex = 64;
-            // 
-            // RemoveRules
-            // 
-            RemoveRules.Location = new Point(236, 1059);
-            RemoveRules.Name = "RemoveRules";
-            RemoveRules.Size = new Size(183, 40);
-            RemoveRules.TabIndex = 65;
-            RemoveRules.Text = "Remove checked";
-            RemoveRules.UseVisualStyleBackColor = true;
+            richTextBox1.Location = new Point(1404, 24);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(445, 929);
+            richTextBox1.TabIndex = 61;
+            richTextBox1.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1422, 1299);
-            Controls.Add(RemoveRules);
-            Controls.Add(RulesList);
-            Controls.Add(AddRuleToList);
-            Controls.Add(label16);
-            Controls.Add(Field40);
+            ClientSize = new Size(1861, 965);
+            Controls.Add(richTextBox1);
             Controls.Add(Field38);
             Controls.Add(Field36);
             Controls.Add(checkCharges);
@@ -719,7 +676,7 @@
             Controls.Add(label1);
             Controls.Add(Field13);
             Controls.Add(Field12);
-            Controls.Add(button1);
+            Controls.Add(Generate);
             Controls.Add(Field11);
             Controls.Add(Field10);
             Controls.Add(Field9);
@@ -757,7 +714,7 @@
         private ComboBox Field10;
         private NumericUpDown Field11;
         private ToolTip toolTip1;
-        private Button button1;
+        private Button Generate;
         private ComboBox Field12;
         private CheckedListBox Field13;
         private Label label1;
@@ -805,10 +762,6 @@
         private CheckBox checkCharges;
         private NumericUpDown Field36;
         private CheckBox Field38;
-        private ComboBox Field40;
-        private Label label16;
-        private Button AddRuleToList;
-        private CheckedListBox RulesList;
-        private Button RemoveRules;
+        private RichTextBox richTextBox1;
     }
 }

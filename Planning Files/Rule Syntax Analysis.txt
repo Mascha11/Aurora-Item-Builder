@@ -44,16 +44,15 @@
 
     ##and
 
-    <element name="Dexterity" type="Ability Score Improvement" source="Dungeon Master’s Guide" id="ID_WOTC_DMG_ADJUSTED_ABILITY_SCORE_INCREASE_DEXTERITY">
-		<requirements>!ID_WOTC_DMG_ADJUSTED_ABILITY_SCORE_DECREASE_DEXTERIY</requirements>
-		<supports>Book of Vile Darkness Ability Score Increase</supports>
+	<element name="Dexterity" type="Ability Score Improvement" source="Dungeon Master’s Guide" id="ID_WOTC_DMG_ADJUSTED_ABILITY_SCORE_DECREASE_DEXTERITY">
+		<requirements>!ID_WOTC_DMG_ADJUSTED_ABILITY_SCORE_INCREASE_DEXTERITY</requirements>
+		<supports>Book of Vile Darkness Ability Score Decrease</supports>
 		<description>
-			<p>Your Dexterity increases by 2 to a maximum of 24.</p>
+			<p>Your Dexterity decreases by 2 to a minimum of 3.</p>
 		</description>
 		<sheet display="false" />
 		<rules>
-			<stat name="dexterity" value="2" alt="Book of Vile Darkness"/>
-			<stat name="dexterity:max" value="4"/>
+			<stat name="dexterity" value="-2" alt="Book of Vile Darkness"/>
 		</rules>
 	</element>
 
