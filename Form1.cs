@@ -44,6 +44,9 @@ namespace Aurora_Item_Builder
             string convAuthor = Field4.Text.ToUpper().Replace(' ', '_');
             string description = Field6.Text;
             string category = Field8.SelectedItem?.ToString();
+            string cost = Field9.Text;
+            string currency = Field10.SelectedItem?.ToString();
+            string weight = Field11.Text;
             /*
             StringBuilder checkedListBoxInput = new StringBuilder();
 
@@ -55,13 +58,20 @@ namespace Aurora_Item_Builder
             // Format the output text
             StringBuilder output = new StringBuilder();
             output.AppendLine("<element name\"" + name + "\"" + " type\"" + type + "\"" + " source=\"" + source + "\"" + " id=\"ID_{" + convAuthor + "}_{" + convSource + "}_{" + convType + "}_{" + convName + "}\">");
-            output.AppendLine("<description>" + description + "</description>");
+            output.AppendLine("<description>");
+            output.AppendLine(description + "</description>");
+            output.AppendLine("</description>");
+            output.AppendLine("<setters>");
+            output.AppendLine("<set name=\"keywords\"></set>");
+            output.AppendLine("<set name=\"category\">" + category + "</set>");
+            output.AppendLine("<set name=\"cost\"> currency=\"" + currency + "\">" + cost + "</set>");
+            output.AppendLine("<set name=\"weight\" lb=\"" + weight + "\">" + weight + "lb" + "</set>");
             //output.AppendLine("ComboBox Selected: " + (type ?? "None"));
             //output.AppendLine("CheckedListBox Selected Items:");
             //output.Append(checkedListBoxInput.ToString());
 
             // Display the formatted text in richTextBox1
-            richTextBox1.Text = output.ToString();
+            elementText.Text = output.ToString();
 
 
         }

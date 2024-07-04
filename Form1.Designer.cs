@@ -87,7 +87,7 @@
             checkCharges = new CheckBox();
             Field36 = new NumericUpDown();
             Field38 = new CheckBox();
-            richTextBox1 = new RichTextBox();
+            elementText = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)Field9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Field11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Field14).BeginInit();
@@ -111,13 +111,13 @@
             // 
             // Field2
             // 
-            Field2.FormattingEnabled = true;
             Field2.Items.AddRange(new object[] { "Magic Item", "Weapon", "Weapon Property", "Item" });
             Field2.Location = new Point(265, 24);
             Field2.Name = "Field2";
             Field2.Size = new Size(212, 38);
             Field2.TabIndex = 2;
             Field2.Text = "Choose Type";
+            toolTip1.SetToolTip(Field2, "Choose what Type you want to add");
             // 
             // Field3
             // 
@@ -616,20 +616,20 @@
             Field38.Text = "stackable Item?";
             Field38.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // elementText
             // 
-            richTextBox1.Location = new Point(1404, 24);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(445, 929);
-            richTextBox1.TabIndex = 61;
-            richTextBox1.Text = "";
+            elementText.Location = new Point(1404, 24);
+            elementText.Name = "elementText";
+            elementText.Size = new Size(445, 929);
+            elementText.TabIndex = 61;
+            elementText.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1861, 965);
-            Controls.Add(richTextBox1);
+            Controls.Add(elementText);
             Controls.Add(Field38);
             Controls.Add(Field36);
             Controls.Add(checkCharges);
@@ -762,6 +762,6 @@
         private CheckBox checkCharges;
         private NumericUpDown Field36;
         private CheckBox Field38;
-        private RichTextBox richTextBox1;
+        private RichTextBox elementText;
     }
 }

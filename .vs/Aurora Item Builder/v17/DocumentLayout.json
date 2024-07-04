@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\planning files\\reference_collection.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -52,25 +52,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AQIAABkAAABAfZmZmZkuwDgAAAB7AAAA",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAABwAAACg2P////8gwEMAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T19:29:38.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Entwurf]",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs [Entwurf]*",
-              "RelativeToolTip": "Form1.cs [Entwurf]*",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs [Entwurf]",
+              "RelativeToolTip": "Form1.cs [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T19:11:02.552Z",
               "EditorCaption": " [Entwurf]"
@@ -106,7 +106,7 @@
               "RelativeDocumentMoniker": "Planning Files\\reference_collection.txt",
               "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning Files\\reference_collection.txt",
               "RelativeToolTip": "Planning Files\\reference_collection.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGwAAAAmAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAGwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-07-03T19:16:22.219Z",
               "EditorCaption": ""
