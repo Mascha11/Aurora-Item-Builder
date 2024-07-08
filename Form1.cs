@@ -1,5 +1,6 @@
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aurora_Item_Builder
@@ -10,6 +11,8 @@ namespace Aurora_Item_Builder
         {
             InitializeComponent();
         }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -74,15 +77,15 @@ namespace Aurora_Item_Builder
             }
             string ArmorType = SelectArmorTypeCB.SelectedItem?.ToString();
             string ArmorImprovement = "";
-            foreach ( var item in SelectImprovementTagTL.CheckedItems)
+            foreach (var item in SelectImprovementTagTL.CheckedItems)
             { ArmorImprovement += item.ToString() + ", "; }
             string Charges = SelectChargesNI.Text;
             string ACMod = SelectACModNI.Text;
             string ACFlat = SelectACFlatNI.Text;
             string ArmorAbilMod = SelectArmorAbilCB.SelectedItem?.ToString();
-            string MaxMod   = SelectACAbilModMaxNI.Text;
+            string MaxMod = SelectACAbilModMaxNI.Text;
             string CustomNameAdd = SelectCustomNameAddTI.Text;
-            string NameAdd = SelectNameAddCB.SelectedItem?.ToString();  
+            string NameAdd = SelectNameAddCB.SelectedItem?.ToString();
             string Stealth = SelectArmorStealthModCB.SelectedItem?.ToString();
 
             // Format the output text
@@ -124,6 +127,14 @@ namespace Aurora_Item_Builder
         private void AddImprovement_CheckedChanged(object sender, EventArgs e)
         {
             SelectImprovementTagTL.Visible = ImprovementCheck.Checked;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+
+
+            form2.Show();
         }
     }
 }

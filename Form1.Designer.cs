@@ -88,6 +88,7 @@
             SelectChargesNI = new NumericUpDown();
             Field38 = new CheckBox();
             elementText = new RichTextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)SelectCostNI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SelectWeightNI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SelectNormalRangeNI).BeginInit();
@@ -624,11 +625,22 @@
             elementText.TabIndex = 61;
             elementText.Text = "";
             // 
+            // button1
+            // 
+            button1.Location = new Point(986, 900);
+            button1.Name = "button1";
+            button1.Size = new Size(131, 40);
+            button1.TabIndex = 62;
+            button1.Text = "open form2 DEBUG";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1861, 965);
+            Controls.Add(button1);
             Controls.Add(elementText);
             Controls.Add(Field38);
             Controls.Add(SelectChargesNI);
@@ -763,5 +775,6 @@
         private NumericUpDown SelectChargesNI;
         private CheckBox Field38;
         private RichTextBox elementText;
+        private Button button1;
     }
 }

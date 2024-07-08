@@ -1,18 +1,17 @@
-<stat name=         "speed"                             value="30"                      bonus="base"    />                  #Set to 30
-                    "speed:*type*"                      value="30"                      bonus="base"
-                                                        "speed"                         bonus="base"                        #Set certain speed to base speed
-                    "*ability*:score:set"               value="19"                      bonus="base" 
-                    "darkvision:range"                  value="60"                                                          #Set Range to 60
-                        blindsight
-                        truesight
-                        tremorsense
-                        mindsight
-                    "sleight of hand:misc"              value="5"                                                           #5 Bonus to Sleight of Hand          
-                    "longbow:damage"                    "2"                                                                 #Add 2 damage
-                        shortbow
+<stat name=         "speed"                             value="30"                      bonus="base"    />                  #Set to 30                          #modSpeedBase
+                    "speed:*type*"                      value="30"                      bonus="base"                                                            #modSpeed*Type*
+                                                        "speed"                         bonus="base"                        #Set certain speed to base speed    #modSpeed
+                    "*ability*:score:set"               value="19"                      bonus="base"                                                            #modAbilSet
+                    "darkvision:range"                  value="60"                                                          #Set Range to 60                    #modVisionDark
+                        blindsight                                                                                                                              #modVisionBlind
+                        truesight                                                                                                                               #modVisionTrue
+                        tremorsense                                                                                                                             #modVisionTremor
+                        mindsight                                                                                                                               #modVisionMind
+                    "longbow:damage"                    "2"                                                                 #Add 2 damage                       #modDamageLongbow
+                        shortbow                                                                                                                                #modDamageShortbow
                         aura of hate                ##longbow, shortbow, melee, martial arts, agonizing blast
-                        barbarian rage              ##unarmed
-                        melee
+                        barbarian rage              ##unarmed, companion, lifedrinker, natural
+                        melee                       ##more (maybe set up some sort of file search?)
                         martial arts
                         agonizing blast
                         lifedrinker
@@ -48,13 +47,13 @@
                         transfer elements
                         fire within
                         ua:searing vengeance
-                    "ac:misc"                           "1"                         equipped="[armor:none],[shield:none]"   #Add 1 to ac IF no armor and shield
-                    |"ac:robe of the archmagi"          "15"                                                                #Set AC to 15+Dex
-                    |"ac:*item_name?*"                  "dexterity:modifier"                                                #equipped condition possible
-                    |"ac:calculation"                   "ac:robe of the archmagi"   bonus="calculation" equipped=""         #item name maybe needed to calculate
-                    "proficiency"                       "1"
-                    "initiative"                        "1"
-                    "*insert_ability*"                  "2"                                                                 #Raise Ability (i.e. Con)
+                    "ac:misc"                           "1"                         equipped="[armor:none],[shield:none]"   #Add 1 to ac IF no armor and shield #
+                    |"ac:robe of the archmagi"          "15"                                                                #Set AC to 15+Dex                   #
+                    |"ac:*item_name?*"                  "dexterity:modifier"                                                #equipped condition possible        #
+                    |"ac:calculation"                   "ac:robe of the archmagi"   bonus="calculation" equipped=""         #item name maybe needed to calculate#
+                    "proficiency"                       "1"                                                                                                     #modProficiency
+                    "initiative"                        "1"                                                                                                     #modIni
+                    "*insert_ability*"                  "2"                                                                 #Raise Ability (i.e. Con)           #modCheckAbility
                     "*ability*:max"                     "2"                                                                 #Raise Ability Max
                     "*insert_skill*:misc"               "1"                                                                 #1 Bonus on Ability Checks        
                     "*insert_ability*:save:misc"        "1"                                                                 #Add 1 to save
