@@ -3,9 +3,51 @@
                                                         "speed"                         bonus="base"                        #Set certain speed to base speed
                     "*ability*:score:set"               value="19"                      bonus="base" 
                     "darkvision:range"                  value="60"                                                          #Set Range to 60
+                        blindsight
+                        truesight
+                        tremorsense
+                        mindsight
                     "sleight of hand:misc"              value="5"                                                           #5 Bonus to Sleight of Hand          
                     "longbow:damage"                    "2"                                                                 #Add 2 damage
-                    "shortbow:damage"
+                        shortbow
+                        aura of hate                ##longbow, shortbow, melee, martial arts, agonizing blast
+                        barbarian rage              ##unarmed
+                        melee
+                        martial arts
+                        agonizing blast
+                        lifedrinker
+                        companion
+                        precise-attacker
+                        blood reckoning
+                        unarmed
+                        natural
+                        fey step:summer:
+                        sun shield
+                        form of the beast
+                        lizardfolk bite
+                        cloak of flies
+                        maddening hex
+                        scornful rebuke
+                        feral might
+                        predatory strikes
+                        cross counter
+                        tentacles
+                        fade rot
+                        wildflame
+                        favor the bold
+                        natures armor
+                        elemental attunement
+                        sneak spell
+                        ribbon cutter
+                        fang of the prowler
+                        constricting vice
+                        feral attack
+                        slippery fall
+                        rebuke from beyond
+                        judgement seal
+                        transfer elements
+                        fire within
+                        ua:searing vengeance
                     "ac:misc"                           "1"                         equipped="[armor:none],[shield:none]"   #Add 1 to ac IF no armor and shield
                     |"ac:robe of the archmagi"          "15"                                                                #Set AC to 15+Dex
                     |"ac:*item_name?*"                  "dexterity:modifier"                                                #equipped condition possible
