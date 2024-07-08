@@ -18,14 +18,14 @@ namespace Aurora_Item_Builder
 
         private void Field8_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var category = Field8.SelectedItem;
-            if (Field8.SelectedItem.ToString() == "Spellcasting Focus")
+            var category = SelectCatCB.SelectedItem;
+            if (SelectCatCB.SelectedItem.ToString() == "Spellcasting Focus")
             {
-                Field12.Visible = true;
+                SelectFocusCB.Visible = true;
             }
             else
             {
-                Field12.Visible = false;
+                SelectFocusCB.Visible = false;
             }
         }
 
@@ -34,27 +34,57 @@ namespace Aurora_Item_Builder
         {
 
             // Gather input from the controls
-            string name = Field1.Text;
-            string convName = Field1.Text.ToUpper().Replace(' ', '_');
-            string type = Field2.SelectedItem?.ToString();
-            string convType = Field2.Text.ToUpper().Replace(' ', '_');
-            string source = Field3.Text;
-            string convSource = Field3.Text.ToUpper().Replace(' ', '_');
-            string author = Field4.Text;
-            string convAuthor = Field4.Text.ToUpper().Replace(' ', '_');
+            string name = SelectNameTI.Text;
+            string convName = SelectNameTI.Text.ToUpper().Replace(' ', '_');
+            string type = SelectTypeCB.SelectedItem?.ToString();
+            string convType = SelectTypeCB.Text.ToUpper().Replace(' ', '_');
+            string source = SelectSourceTI.Text;
+            string convSource = SelectSourceTI.Text.ToUpper().Replace(' ', '_');
+            string author = SelectAuthorTI.Text;
+            string convAuthor = SelectAuthorTI.Text.ToUpper().Replace(' ', '_');
             string description = Field6.Text;
-            string category = Field8.SelectedItem?.ToString();
-            string cost = Field9.Text;
-            string currency = Field10.SelectedItem?.ToString();
-            string weight = Field11.Text;
-            /*
-            StringBuilder checkedListBoxInput = new StringBuilder();
-
-            foreach (var item in checkedListBox1.CheckedItems)
+            string category = SelectCatCB.SelectedItem?.ToString();
+            string cost = SelectCostNI.Text;
+            string currency = SelectCurrencyCB.SelectedItem?.ToString();
+            string weight = SelectWeightNI.Text;
+            string ItemType = SelectItemTypeCB.SelectedItem?.ToString();
+            string rarity = SelectRarityCB.SelectedItem?.ToString();
+            string enhancement = SelectEnhanceCB.SelectedItem?.ToString();
+            string focus = SelectFocusCB.SelectedItem?.ToString();
+            string slot = "";
+            foreach (var item in SelectSlotTL.CheckedItems)
             {
-                checkedListBoxInput.AppendLine(item.ToString());
+                slot += item.ToString() + ", ";
             }
-            */
+            string attunement = "";
+            foreach (var item in SelectAttuneTL.CheckedItems)
+            {
+                attunement += item.ToString() + ", ";
+            }
+            string NormalRange = SelectNormalRangeNI.Text;
+            string LongRange = SelectLongRangeNI.Text;
+            string NumberDmgDice = SelectNumberDiceNI.Text;
+            string TypeDmgDice = SelectDmgDiceCB.SelectedItem?.ToString();
+            string DmgFlatMod = SelectDmgModNI.Text;
+            string DmgType = SelectDmgTypeCB.SelectedItem?.ToString();
+            string WeaponTags = "";
+            foreach (var item in SelectWpnTagTL.CheckedItems)
+            {
+                WeaponTags += item.ToString() + ", ";
+            }
+            string ArmorType = SelectArmorTypeCB.SelectedItem?.ToString();
+            string ArmorImprovement = "";
+            foreach ( var item in SelectImprovementTagTL.CheckedItems)
+            { ArmorImprovement += item.ToString() + ", "; }
+            string Charges = SelectChargesNI.Text;
+            string ACMod = SelectACModNI.Text;
+            string ACFlat = SelectACFlatNI.Text;
+            string ArmorAbilMod = SelectArmorAbilCB.SelectedItem?.ToString();
+            string MaxMod   = SelectACAbilModMaxNI.Text;
+            string CustomNameAdd = SelectCustomNameAddTI.Text;
+            string NameAdd = SelectNameAddCB.SelectedItem?.ToString();  
+            string Stealth = SelectArmorStealthModCB.SelectedItem?.ToString();
+
             // Format the output text
             StringBuilder output = new StringBuilder();
             output.AppendLine("<element name\"" + name + "\"" + " type\"" + type + "\"" + " source=\"" + source + "\"" + " id=\"ID_{" + convAuthor + "}_{" + convSource + "}_{" + convType + "}_{" + convName + "}\">");
@@ -93,7 +123,7 @@ namespace Aurora_Item_Builder
 
         private void AddImprovement_CheckedChanged(object sender, EventArgs e)
         {
-            Field27.Visible = AddImprovement.Checked;
+            SelectImprovementTagTL.Visible = ImprovementCheck.Checked;
         }
     }
 }

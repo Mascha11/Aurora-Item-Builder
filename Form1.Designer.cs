@@ -29,111 +29,111 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Field1 = new TextBox();
-            Field2 = new ComboBox();
-            Field3 = new TextBox();
-            Field4 = new TextBox();
+            SelectNameTI = new TextBox();
+            SelectTypeCB = new ComboBox();
+            SelectSourceTI = new TextBox();
+            SelectAuthorTI = new TextBox();
             Field6 = new RichTextBox();
-            Field8 = new ComboBox();
-            Field9 = new NumericUpDown();
-            Field10 = new ComboBox();
-            Field11 = new NumericUpDown();
+            SelectCatCB = new ComboBox();
+            SelectCostNI = new NumericUpDown();
+            SelectCurrencyCB = new ComboBox();
+            SelectWeightNI = new NumericUpDown();
             toolTip1 = new ToolTip(components);
             Generate = new Button();
-            Field12 = new ComboBox();
-            Field13 = new CheckedListBox();
+            SelectFocusCB = new ComboBox();
+            SelectSlotTL = new CheckedListBox();
             label1 = new Label();
-            Field14 = new NumericUpDown();
+            SelectNormalRangeNI = new NumericUpDown();
             label2 = new Label();
-            Field15 = new NumericUpDown();
+            SelectLongRangeNI = new NumericUpDown();
             label3 = new Label();
-            Field16 = new NumericUpDown();
-            Field17 = new ComboBox();
-            Field18 = new NumericUpDown();
-            Field19 = new ComboBox();
+            SelectNumberDiceNI = new NumericUpDown();
+            SelectDmgDiceCB = new ComboBox();
+            SelectDmgModNI = new NumericUpDown();
+            SelectDmgTypeCB = new ComboBox();
             label4 = new Label();
             label5 = new Label();
-            Field20 = new ComboBox();
+            SelectItemTypeCB = new ComboBox();
             label6 = new Label();
-            Field21 = new CheckedListBox();
+            SelectAttuneTL = new CheckedListBox();
             label7 = new Label();
             weight = new Label();
             label8 = new Label();
             label9 = new Label();
-            Field22 = new ComboBox();
+            SelectRarityCB = new ComboBox();
             label10 = new Label();
-            Field23 = new ComboBox();
+            SelectEnhanceCB = new ComboBox();
             label11 = new Label();
-            Field25 = new CheckedListBox();
+            SelectWpnTagTL = new CheckedListBox();
             label12 = new Label();
-            Field26 = new ComboBox();
-            AddImprovement = new CheckBox();
-            Field27 = new CheckedListBox();
+            SelectArmorTypeCB = new ComboBox();
+            ImprovementCheck = new CheckBox();
+            SelectImprovementTagTL = new CheckedListBox();
             label13 = new Label();
             label14 = new Label();
-            FIeld28 = new NumericUpDown();
+            SelectACModNI = new NumericUpDown();
             toolTip2 = new ToolTip(components);
-            Field29 = new NumericUpDown();
-            Field30 = new ComboBox();
-            ArmorAbilMod = new CheckBox();
-            ArmorAbilModMax = new CheckBox();
-            Field31 = new NumericUpDown();
-            Field33 = new TextBox();
-            StackedName = new CheckBox();
+            SelectACFlatNI = new NumericUpDown();
+            SelectArmorAbilCB = new ComboBox();
+            ArmorAbilCheck = new CheckBox();
+            ACmaxModCheck = new CheckBox();
+            SelectACAbilModMaxNI = new NumericUpDown();
+            SelectCustomNameAddTI = new TextBox();
+            NameAddCheck = new CheckBox();
             label15 = new Label();
-            Field32 = new ComboBox();
-            Field34 = new ComboBox();
-            StealthChange = new CheckBox();
-            checkCharges = new CheckBox();
-            Field36 = new NumericUpDown();
+            SelectNameAddCB = new ComboBox();
+            SelectArmorStealthModCB = new ComboBox();
+            StealthChangeCheck = new CheckBox();
+            ChargesCheck = new CheckBox();
+            SelectChargesNI = new NumericUpDown();
             Field38 = new CheckBox();
             elementText = new RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)Field9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field14).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field15).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)FIeld28).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field29).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field31).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Field36).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectCostNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectWeightNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectNormalRangeNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectLongRangeNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectNumberDiceNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectDmgModNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectACModNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectACFlatNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectACAbilModMaxNI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)SelectChargesNI).BeginInit();
             SuspendLayout();
             // 
-            // Field1
+            // SelectNameTI
             // 
-            Field1.Location = new Point(21, 26);
-            Field1.Name = "Field1";
-            Field1.Size = new Size(175, 35);
-            Field1.TabIndex = 0;
-            Field1.Text = "Item Name";
-            Field1.TextChanged += textBox1_TextChanged;
+            SelectNameTI.Location = new Point(21, 26);
+            SelectNameTI.Name = "SelectNameTI";
+            SelectNameTI.Size = new Size(175, 35);
+            SelectNameTI.TabIndex = 0;
+            SelectNameTI.Text = "Item Name";
+            SelectNameTI.TextChanged += textBox1_TextChanged;
             // 
-            // Field2
+            // SelectTypeCB
             // 
-            Field2.Items.AddRange(new object[] { "Magic Item", "Weapon", "Weapon Property", "Item" });
-            Field2.Location = new Point(265, 24);
-            Field2.Name = "Field2";
-            Field2.Size = new Size(212, 38);
-            Field2.TabIndex = 2;
-            Field2.Text = "Choose Type";
-            toolTip1.SetToolTip(Field2, "Choose what Type you want to add");
+            SelectTypeCB.Items.AddRange(new object[] { "Magic Item", "Weapon", "Weapon Property", "Item" });
+            SelectTypeCB.Location = new Point(265, 24);
+            SelectTypeCB.Name = "SelectTypeCB";
+            SelectTypeCB.Size = new Size(212, 38);
+            SelectTypeCB.TabIndex = 2;
+            SelectTypeCB.Text = "Choose Type";
+            toolTip1.SetToolTip(SelectTypeCB, "Choose what Type you want to add");
             // 
-            // Field3
+            // SelectSourceTI
             // 
-            Field3.Location = new Point(546, 26);
-            Field3.Name = "Field3";
-            Field3.Size = new Size(175, 35);
-            Field3.TabIndex = 3;
-            Field3.Text = "Name of Source";
+            SelectSourceTI.Location = new Point(546, 26);
+            SelectSourceTI.Name = "SelectSourceTI";
+            SelectSourceTI.Size = new Size(175, 35);
+            SelectSourceTI.TabIndex = 3;
+            SelectSourceTI.Text = "Name of Source";
             // 
-            // Field4
+            // SelectAuthorTI
             // 
-            Field4.Location = new Point(790, 26);
-            Field4.Name = "Field4";
-            Field4.Size = new Size(175, 35);
-            Field4.TabIndex = 4;
-            Field4.Text = "Author";
+            SelectAuthorTI.Location = new Point(790, 26);
+            SelectAuthorTI.Name = "SelectAuthorTI";
+            SelectAuthorTI.Size = new Size(175, 35);
+            SelectAuthorTI.TabIndex = 4;
+            SelectAuthorTI.Text = "Author";
             // 
             // Field6
             // 
@@ -143,41 +143,41 @@
             Field6.TabIndex = 5;
             Field6.Text = "Description";
             // 
-            // Field8
+            // SelectCatCB
             // 
-            Field8.FormattingEnabled = true;
-            Field8.Items.AddRange(new object[] { "Adventuring Gear", "Treasure", "Equipment Packs", "Tools", "Musical Instruments", "Armor", "Magic Armor", "Weapons", "Magic Weapons", "Ammunition", "Spellcasting Focus", "Wondrous Items", "Supernatural Gifts", "Staffs", "Rods", "Wands", "Rings", "Potions", "Poison ", "Scrolls", "Spell Scrolls", "Explosives", "Mounts & Vehicles", "Optional Class Feature", "Alchemical Formulas", "Whetstones Reagents", "Additional Feature", "Additional Language", "Additional Proficiency", "Additional Spell", "Additional Ranger Spell" });
-            Field8.Location = new Point(1034, 24);
-            Field8.Name = "Field8";
-            Field8.Size = new Size(354, 38);
-            Field8.TabIndex = 6;
-            Field8.Text = "Shop Category";
+            SelectCatCB.FormattingEnabled = true;
+            SelectCatCB.Items.AddRange(new object[] { "Adventuring Gear", "Treasure", "Equipment Packs", "Tools", "Musical Instruments", "Armor", "Magic Armor", "Weapons", "Magic Weapons", "Ammunition", "Spellcasting Focus", "Wondrous Items", "Supernatural Gifts", "Staffs", "Rods", "Wands", "Rings", "Potions", "Poison ", "Scrolls", "Spell Scrolls", "Explosives", "Mounts & Vehicles", "Optional Class Feature", "Alchemical Formulas", "Whetstones Reagents", "Additional Feature", "Additional Language", "Additional Proficiency", "Additional Spell", "Additional Ranger Spell" });
+            SelectCatCB.Location = new Point(1034, 24);
+            SelectCatCB.Name = "SelectCatCB";
+            SelectCatCB.Size = new Size(354, 38);
+            SelectCatCB.TabIndex = 6;
+            SelectCatCB.Text = "Shop Category";
             // 
-            // Field9
+            // SelectCostNI
             // 
-            Field9.Location = new Point(21, 254);
-            Field9.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
-            Field9.Name = "Field9";
-            Field9.Size = new Size(210, 35);
-            Field9.TabIndex = 7;
+            SelectCostNI.Location = new Point(21, 254);
+            SelectCostNI.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            SelectCostNI.Name = "SelectCostNI";
+            SelectCostNI.Size = new Size(210, 35);
+            SelectCostNI.TabIndex = 7;
             // 
-            // Field10
+            // SelectCurrencyCB
             // 
-            Field10.FormattingEnabled = true;
-            Field10.Items.AddRange(new object[] { "PP", "GP", "EP", "SP", "CP" });
-            Field10.Location = new Point(237, 252);
-            Field10.Name = "Field10";
-            Field10.Size = new Size(61, 38);
-            Field10.TabIndex = 8;
-            Field10.Text = "GP";
+            SelectCurrencyCB.FormattingEnabled = true;
+            SelectCurrencyCB.Items.AddRange(new object[] { "PP", "GP", "EP", "SP", "CP" });
+            SelectCurrencyCB.Location = new Point(237, 252);
+            SelectCurrencyCB.Name = "SelectCurrencyCB";
+            SelectCurrencyCB.Size = new Size(61, 38);
+            SelectCurrencyCB.TabIndex = 8;
+            SelectCurrencyCB.Text = "GP";
             // 
-            // Field11
+            // SelectWeightNI
             // 
-            Field11.Location = new Point(373, 254);
-            Field11.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            Field11.Name = "Field11";
-            Field11.Size = new Size(136, 35);
-            Field11.TabIndex = 9;
+            SelectWeightNI.Location = new Point(373, 254);
+            SelectWeightNI.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            SelectWeightNI.Name = "SelectWeightNI";
+            SelectWeightNI.Size = new Size(136, 35);
+            SelectWeightNI.TabIndex = 9;
             // 
             // toolTip1
             // 
@@ -193,24 +193,24 @@
             Generate.UseVisualStyleBackColor = true;
             Generate.Click += button1_Click;
             // 
-            // Field12
+            // SelectFocusCB
             // 
-            Field12.FormattingEnabled = true;
-            Field12.Items.AddRange(new object[] { "Arcane Focus", "Druidic Focus", "Holy Symbol" });
-            Field12.Location = new Point(24, 349);
-            Field12.Name = "Field12";
-            Field12.Size = new Size(212, 38);
-            Field12.TabIndex = 12;
-            Field12.Text = "Type of Focus";
+            SelectFocusCB.FormattingEnabled = true;
+            SelectFocusCB.Items.AddRange(new object[] { "Arcane Focus", "Druidic Focus", "Holy Symbol" });
+            SelectFocusCB.Location = new Point(24, 349);
+            SelectFocusCB.Name = "SelectFocusCB";
+            SelectFocusCB.Size = new Size(212, 38);
+            SelectFocusCB.TabIndex = 12;
+            SelectFocusCB.Text = "Type of Focus";
             // 
-            // Field13
+            // SelectSlotTL
             // 
-            Field13.FormattingEnabled = true;
-            Field13.Items.AddRange(new object[] { "Body", "onehand", "secondary" });
-            Field13.Location = new Point(24, 463);
-            Field13.Name = "Field13";
-            Field13.Size = new Size(209, 100);
-            Field13.TabIndex = 13;
+            SelectSlotTL.FormattingEnabled = true;
+            SelectSlotTL.Items.AddRange(new object[] { "Body", "onehand", "secondary" });
+            SelectSlotTL.Location = new Point(24, 463);
+            SelectSlotTL.Name = "SelectSlotTL";
+            SelectSlotTL.Size = new Size(209, 100);
+            SelectSlotTL.TabIndex = 13;
             // 
             // label1
             // 
@@ -221,13 +221,13 @@
             label1.TabIndex = 14;
             label1.Text = "Range";
             // 
-            // Field14
+            // SelectNormalRangeNI
             // 
-            Field14.Location = new Point(521, 355);
-            Field14.Maximum = new decimal(new int[] { 999, 0, 0, 0 });
-            Field14.Name = "Field14";
-            Field14.Size = new Size(90, 35);
-            Field14.TabIndex = 15;
+            SelectNormalRangeNI.Location = new Point(521, 355);
+            SelectNormalRangeNI.Maximum = new decimal(new int[] { 999, 0, 0, 0 });
+            SelectNormalRangeNI.Name = "SelectNormalRangeNI";
+            SelectNormalRangeNI.Size = new Size(90, 35);
+            SelectNormalRangeNI.TabIndex = 15;
             // 
             // label2
             // 
@@ -238,13 +238,13 @@
             label2.TabIndex = 16;
             label2.Text = "/";
             // 
-            // Field15
+            // SelectLongRangeNI
             // 
-            Field15.Location = new Point(676, 355);
-            Field15.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            Field15.Name = "Field15";
-            Field15.Size = new Size(96, 35);
-            Field15.TabIndex = 17;
+            SelectLongRangeNI.Location = new Point(676, 355);
+            SelectLongRangeNI.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            SelectLongRangeNI.Name = "SelectLongRangeNI";
+            SelectLongRangeNI.Size = new Size(96, 35);
+            SelectLongRangeNI.TabIndex = 17;
             // 
             // label3
             // 
@@ -255,39 +255,39 @@
             label3.TabIndex = 18;
             label3.Text = "Damage";
             // 
-            // Field16
+            // SelectNumberDiceNI
             // 
-            Field16.Location = new Point(521, 437);
-            Field16.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            Field16.Name = "Field16";
-            Field16.Size = new Size(81, 35);
-            Field16.TabIndex = 19;
+            SelectNumberDiceNI.Location = new Point(521, 437);
+            SelectNumberDiceNI.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            SelectNumberDiceNI.Name = "SelectNumberDiceNI";
+            SelectNumberDiceNI.Size = new Size(81, 35);
+            SelectNumberDiceNI.TabIndex = 19;
             // 
-            // Field17
+            // SelectDmgDiceCB
             // 
-            Field17.FormattingEnabled = true;
-            Field17.Items.AddRange(new object[] { "d2", "d4", "d6", "d8", "d10", "d12", "d20" });
-            Field17.Location = new Point(608, 435);
-            Field17.Name = "Field17";
-            Field17.Size = new Size(69, 38);
-            Field17.TabIndex = 20;
+            SelectDmgDiceCB.FormattingEnabled = true;
+            SelectDmgDiceCB.Items.AddRange(new object[] { "d2", "d4", "d6", "d8", "d10", "d12", "d20" });
+            SelectDmgDiceCB.Location = new Point(608, 435);
+            SelectDmgDiceCB.Name = "SelectDmgDiceCB";
+            SelectDmgDiceCB.Size = new Size(69, 38);
+            SelectDmgDiceCB.TabIndex = 20;
             // 
-            // Field18
+            // SelectDmgModNI
             // 
-            Field18.Location = new Point(683, 436);
-            Field18.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
-            Field18.Name = "Field18";
-            Field18.Size = new Size(90, 35);
-            Field18.TabIndex = 21;
+            SelectDmgModNI.Location = new Point(683, 436);
+            SelectDmgModNI.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
+            SelectDmgModNI.Name = "SelectDmgModNI";
+            SelectDmgModNI.Size = new Size(90, 35);
+            SelectDmgModNI.TabIndex = 21;
             // 
-            // Field19
+            // SelectDmgTypeCB
             // 
-            Field19.FormattingEnabled = true;
-            Field19.Items.AddRange(new object[] { "Acid", "Bludgeoning", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Piercing", "Poison", "Psychic", "Radiant", "Slashing", "Thunder" });
-            Field19.Location = new Point(521, 525);
-            Field19.Name = "Field19";
-            Field19.Size = new Size(252, 38);
-            Field19.TabIndex = 22;
+            SelectDmgTypeCB.FormattingEnabled = true;
+            SelectDmgTypeCB.Items.AddRange(new object[] { "Acid", "Bludgeoning", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Piercing", "Poison", "Psychic", "Radiant", "Slashing", "Thunder" });
+            SelectDmgTypeCB.Location = new Point(521, 525);
+            SelectDmgTypeCB.Name = "SelectDmgTypeCB";
+            SelectDmgTypeCB.Size = new Size(252, 38);
+            SelectDmgTypeCB.TabIndex = 22;
             // 
             // label4
             // 
@@ -307,14 +307,14 @@
             label5.TabIndex = 24;
             label5.Text = "Damage Type";
             // 
-            // Field20
+            // SelectItemTypeCB
             // 
-            Field20.FormattingEnabled = true;
-            Field20.Items.AddRange(new object[] { "Shield", "Staff", "Potion", "Scroll", "Ammunition", "Mount", "Tool" });
-            Field20.Location = new Point(565, 251);
-            Field20.Name = "Field20";
-            Field20.Size = new Size(212, 38);
-            Field20.TabIndex = 25;
+            SelectItemTypeCB.FormattingEnabled = true;
+            SelectItemTypeCB.Items.AddRange(new object[] { "Shield", "Staff", "Potion", "Scroll", "Ammunition", "Mount", "Tool" });
+            SelectItemTypeCB.Location = new Point(565, 251);
+            SelectItemTypeCB.Name = "SelectItemTypeCB";
+            SelectItemTypeCB.Size = new Size(212, 38);
+            SelectItemTypeCB.TabIndex = 25;
             // 
             // label6
             // 
@@ -325,15 +325,15 @@
             label6.TabIndex = 26;
             label6.Text = "Item Type";
             // 
-            // Field21
+            // SelectAttuneTL
             // 
-            Field21.FormattingEnabled = true;
-            Field21.Items.AddRange(new object[] { "Artificer", "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" });
-            Field21.Location = new Point(261, 367);
-            Field21.Name = "Field21";
-            Field21.Size = new Size(212, 196);
-            Field21.TabIndex = 27;
-            Field21.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
+            SelectAttuneTL.FormattingEnabled = true;
+            SelectAttuneTL.Items.AddRange(new object[] { "Artificer", "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" });
+            SelectAttuneTL.Location = new Point(261, 367);
+            SelectAttuneTL.Name = "SelectAttuneTL";
+            SelectAttuneTL.Size = new Size(212, 196);
+            SelectAttuneTL.TabIndex = 27;
+            SelectAttuneTL.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
             // label7
             // 
@@ -372,14 +372,14 @@
             label9.TabIndex = 31;
             label9.Text = "Rarity";
             // 
-            // Field22
+            // SelectRarityCB
             // 
-            Field22.FormattingEnabled = true;
-            Field22.Items.AddRange(new object[] { "Common", "Uncommon", "Rare", "Very Rare", "Epic", "Legendary", "Mythic" });
-            Field22.Location = new Point(804, 251);
-            Field22.Name = "Field22";
-            Field22.Size = new Size(212, 38);
-            Field22.TabIndex = 32;
+            SelectRarityCB.FormattingEnabled = true;
+            SelectRarityCB.Items.AddRange(new object[] { "Common", "Uncommon", "Rare", "Very Rare", "Epic", "Legendary", "Mythic" });
+            SelectRarityCB.Location = new Point(804, 251);
+            SelectRarityCB.Name = "SelectRarityCB";
+            SelectRarityCB.Size = new Size(212, 38);
+            SelectRarityCB.TabIndex = 32;
             // 
             // label10
             // 
@@ -390,14 +390,14 @@
             label10.TabIndex = 33;
             label10.Text = "Enhancements";
             // 
-            // Field23
+            // SelectEnhanceCB
             // 
-            Field23.FormattingEnabled = true;
-            Field23.Items.AddRange(new object[] { "+1", "+2", "+3" });
-            Field23.Location = new Point(1085, 254);
-            Field23.Name = "Field23";
-            Field23.Size = new Size(66, 38);
-            Field23.TabIndex = 34;
+            SelectEnhanceCB.FormattingEnabled = true;
+            SelectEnhanceCB.Items.AddRange(new object[] { "+1", "+2", "+3" });
+            SelectEnhanceCB.Location = new Point(1085, 254);
+            SelectEnhanceCB.Name = "SelectEnhanceCB";
+            SelectEnhanceCB.Size = new Size(66, 38);
+            SelectEnhanceCB.TabIndex = 34;
             // 
             // label11
             // 
@@ -408,14 +408,14 @@
             label11.TabIndex = 35;
             label11.Text = "Weapon Tags";
             // 
-            // Field25
+            // SelectWpnTagTL
             // 
-            Field25.FormattingEnabled = true;
-            Field25.Items.AddRange(new object[] { "Quarterstaff", "ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE", "ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED" });
-            Field25.Location = new Point(820, 367);
-            Field25.Name = "Field25";
-            Field25.Size = new Size(568, 196);
-            Field25.TabIndex = 38;
+            SelectWpnTagTL.FormattingEnabled = true;
+            SelectWpnTagTL.Items.AddRange(new object[] { "Quarterstaff", "ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE", "ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED" });
+            SelectWpnTagTL.Location = new Point(820, 367);
+            SelectWpnTagTL.Name = "SelectWpnTagTL";
+            SelectWpnTagTL.Size = new Size(568, 196);
+            SelectWpnTagTL.TabIndex = 38;
             // 
             // label12
             // 
@@ -426,36 +426,36 @@
             label12.TabIndex = 39;
             label12.Text = "Armor Type";
             // 
-            // Field26
+            // SelectArmorTypeCB
             // 
-            Field26.FormattingEnabled = true;
-            Field26.Items.AddRange(new object[] { "Light", "Medium", "Heavy", "Shield" });
-            Field26.Location = new Point(21, 643);
-            Field26.Name = "Field26";
-            Field26.Size = new Size(516, 38);
-            Field26.TabIndex = 40;
+            SelectArmorTypeCB.FormattingEnabled = true;
+            SelectArmorTypeCB.Items.AddRange(new object[] { "Light", "Medium", "Heavy", "Shield" });
+            SelectArmorTypeCB.Location = new Point(21, 643);
+            SelectArmorTypeCB.Name = "SelectArmorTypeCB";
+            SelectArmorTypeCB.Size = new Size(516, 38);
+            SelectArmorTypeCB.TabIndex = 40;
             // 
-            // AddImprovement
+            // ImprovementCheck
             // 
-            AddImprovement.AutoSize = true;
-            AddImprovement.Location = new Point(198, 701);
-            AddImprovement.Name = "AddImprovement";
-            AddImprovement.Size = new Size(172, 34);
-            AddImprovement.TabIndex = 42;
-            AddImprovement.Text = "Improvement?";
-            AddImprovement.UseVisualStyleBackColor = true;
-            AddImprovement.CheckedChanged += AddImprovement_CheckedChanged;
+            ImprovementCheck.AutoSize = true;
+            ImprovementCheck.Location = new Point(198, 701);
+            ImprovementCheck.Name = "ImprovementCheck";
+            ImprovementCheck.Size = new Size(172, 34);
+            ImprovementCheck.TabIndex = 42;
+            ImprovementCheck.Text = "Improvement?";
+            ImprovementCheck.UseVisualStyleBackColor = true;
+            ImprovementCheck.CheckedChanged += AddImprovement_CheckedChanged;
             // 
-            // Field27
+            // SelectImprovementTagTL
             // 
-            Field27.FormattingEnabled = true;
-            Field27.Items.AddRange(new object[] { "ID_INTERNAL_ARMOR_GROUP_LIGHT", "ID_INTERNAL_ARMOR_GROUP_MEDIUM", "ID_INTERNAL_ARMOR_GROUP_HEAVY" });
-            Field27.Location = new Point(21, 741);
-            Field27.Name = "Field27";
-            Field27.Size = new Size(516, 132);
-            Field27.TabIndex = 43;
-            Field27.Visible = false;
-            Field27.SelectedIndexChanged += Field27_SelectedIndexChanged;
+            SelectImprovementTagTL.FormattingEnabled = true;
+            SelectImprovementTagTL.Items.AddRange(new object[] { "ID_INTERNAL_ARMOR_GROUP_LIGHT", "ID_INTERNAL_ARMOR_GROUP_MEDIUM", "ID_INTERNAL_ARMOR_GROUP_HEAVY" });
+            SelectImprovementTagTL.Location = new Point(21, 741);
+            SelectImprovementTagTL.Name = "SelectImprovementTagTL";
+            SelectImprovementTagTL.Size = new Size(516, 132);
+            SelectImprovementTagTL.TabIndex = 43;
+            SelectImprovementTagTL.Visible = false;
+            SelectImprovementTagTL.SelectedIndexChanged += Field27_SelectedIndexChanged;
             // 
             // label13
             // 
@@ -475,82 +475,82 @@
             label14.TabIndex = 45;
             label14.Text = "+";
             // 
-            // FIeld28
+            // SelectACModNI
             // 
-            FIeld28.Location = new Point(727, 642);
-            FIeld28.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
-            FIeld28.Name = "FIeld28";
-            FIeld28.Size = new Size(57, 35);
-            FIeld28.TabIndex = 46;
+            SelectACModNI.Location = new Point(727, 642);
+            SelectACModNI.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            SelectACModNI.Name = "SelectACModNI";
+            SelectACModNI.Size = new Size(57, 35);
+            SelectACModNI.TabIndex = 46;
             // 
             // toolTip2
             // 
             toolTip2.ToolTipTitle = "For adding improvements on pre-exisiting armor like Shield+1";
             toolTip2.Popup += toolTip2_Popup;
             // 
-            // Field29
+            // SelectACFlatNI
             // 
-            Field29.Location = new Point(824, 643);
-            Field29.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
-            Field29.Name = "Field29";
-            Field29.Size = new Size(69, 35);
-            Field29.TabIndex = 47;
-            Field29.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            SelectACFlatNI.Location = new Point(824, 643);
+            SelectACFlatNI.Maximum = new decimal(new int[] { 30, 0, 0, 0 });
+            SelectACFlatNI.Name = "SelectACFlatNI";
+            SelectACFlatNI.Size = new Size(69, 35);
+            SelectACFlatNI.TabIndex = 47;
+            SelectACFlatNI.Value = new decimal(new int[] { 30, 0, 0, 0 });
             // 
-            // Field30
+            // SelectArmorAbilCB
             // 
-            Field30.FormattingEnabled = true;
-            Field30.Items.AddRange(new object[] { "Dexterity", "Strength" });
-            Field30.Location = new Point(676, 759);
-            Field30.Name = "Field30";
-            Field30.Size = new Size(238, 38);
-            Field30.TabIndex = 48;
+            SelectArmorAbilCB.FormattingEnabled = true;
+            SelectArmorAbilCB.Items.AddRange(new object[] { "Dexterity", "Strength" });
+            SelectArmorAbilCB.Location = new Point(676, 759);
+            SelectArmorAbilCB.Name = "SelectArmorAbilCB";
+            SelectArmorAbilCB.Size = new Size(238, 38);
+            SelectArmorAbilCB.TabIndex = 48;
             // 
-            // ArmorAbilMod
+            // ArmorAbilCheck
             // 
-            ArmorAbilMod.AutoSize = true;
-            ArmorAbilMod.Location = new Point(676, 719);
-            ArmorAbilMod.Name = "ArmorAbilMod";
-            ArmorAbilMod.Size = new Size(257, 34);
-            ArmorAbilMod.TabIndex = 49;
-            ArmorAbilMod.Text = "Ability Modifier on top?";
-            ArmorAbilMod.UseVisualStyleBackColor = true;
+            ArmorAbilCheck.AutoSize = true;
+            ArmorAbilCheck.Location = new Point(676, 719);
+            ArmorAbilCheck.Name = "ArmorAbilCheck";
+            ArmorAbilCheck.Size = new Size(257, 34);
+            ArmorAbilCheck.TabIndex = 49;
+            ArmorAbilCheck.Text = "Ability Modifier on top?";
+            ArmorAbilCheck.UseVisualStyleBackColor = true;
             // 
-            // ArmorAbilModMax
+            // ACmaxModCheck
             // 
-            ArmorAbilModMax.AutoSize = true;
-            ArmorAbilModMax.Location = new Point(676, 839);
-            ArmorAbilModMax.Name = "ArmorAbilModMax";
-            ArmorAbilModMax.Size = new Size(176, 34);
-            ArmorAbilModMax.TabIndex = 50;
-            ArmorAbilModMax.Text = "max. Modifier?";
-            ArmorAbilModMax.UseVisualStyleBackColor = true;
+            ACmaxModCheck.AutoSize = true;
+            ACmaxModCheck.Location = new Point(676, 839);
+            ACmaxModCheck.Name = "ACmaxModCheck";
+            ACmaxModCheck.Size = new Size(176, 34);
+            ACmaxModCheck.TabIndex = 50;
+            ACmaxModCheck.Text = "max. Modifier?";
+            ACmaxModCheck.UseVisualStyleBackColor = true;
             // 
-            // Field31
+            // SelectACAbilModMaxNI
             // 
-            Field31.Location = new Point(850, 839);
-            Field31.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
-            Field31.Name = "Field31";
-            Field31.Size = new Size(64, 35);
-            Field31.TabIndex = 51;
+            SelectACAbilModMaxNI.Location = new Point(850, 839);
+            SelectACAbilModMaxNI.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
+            SelectACAbilModMaxNI.Name = "SelectACAbilModMaxNI";
+            SelectACAbilModMaxNI.Size = new Size(64, 35);
+            SelectACAbilModMaxNI.TabIndex = 51;
             // 
-            // Field33
+            // SelectCustomNameAddTI
             // 
-            Field33.Location = new Point(1187, 668);
-            Field33.Name = "Field33";
-            Field33.Size = new Size(175, 35);
-            Field33.TabIndex = 52;
-            Field33.Text = "own Name";
+            SelectCustomNameAddTI.Location = new Point(1187, 668);
+            SelectCustomNameAddTI.Name = "SelectCustomNameAddTI";
+            SelectCustomNameAddTI.Size = new Size(175, 35);
+            SelectCustomNameAddTI.TabIndex = 52;
+            SelectCustomNameAddTI.Text = "own Name";
             // 
-            // StackedName
+            // NameAddCheck
             // 
-            StackedName.AutoSize = true;
-            StackedName.Location = new Point(1044, 596);
-            StackedName.Name = "StackedName";
-            StackedName.Size = new Size(260, 34);
-            StackedName.TabIndex = 53;
-            StackedName.Text = "Check if Name Addition";
-            StackedName.UseVisualStyleBackColor = true;
+            NameAddCheck.AutoSize = true;
+            NameAddCheck.Location = new Point(1044, 596);
+            NameAddCheck.Name = "NameAddCheck";
+            NameAddCheck.Size = new Size(260, 34);
+            NameAddCheck.TabIndex = 53;
+            NameAddCheck.Text = "Check if Name Addition";
+            NameAddCheck.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -561,50 +561,50 @@
             label15.TabIndex = 54;
             label15.Text = "{{parent}} + ";
             // 
-            // Field32
+            // SelectNameAddCB
             // 
-            Field32.FormattingEnabled = true;
-            Field32.Items.AddRange(new object[] { "{{enhancement}}" });
-            Field32.Location = new Point(1187, 709);
-            Field32.Name = "Field32";
-            Field32.Size = new Size(201, 38);
-            Field32.TabIndex = 55;
+            SelectNameAddCB.FormattingEnabled = true;
+            SelectNameAddCB.Items.AddRange(new object[] { "{{enhancement}}" });
+            SelectNameAddCB.Location = new Point(1187, 709);
+            SelectNameAddCB.Name = "SelectNameAddCB";
+            SelectNameAddCB.Size = new Size(201, 38);
+            SelectNameAddCB.TabIndex = 55;
             // 
-            // Field34
+            // SelectArmorStealthModCB
             // 
-            Field34.FormattingEnabled = true;
-            Field34.Items.AddRange(new object[] { "Advantage", "Disadvantage" });
-            Field34.Location = new Point(1044, 835);
-            Field34.Name = "Field34";
-            Field34.Size = new Size(344, 38);
-            Field34.TabIndex = 56;
+            SelectArmorStealthModCB.FormattingEnabled = true;
+            SelectArmorStealthModCB.Items.AddRange(new object[] { "Advantage", "Disadvantage" });
+            SelectArmorStealthModCB.Location = new Point(1044, 835);
+            SelectArmorStealthModCB.Name = "SelectArmorStealthModCB";
+            SelectArmorStealthModCB.Size = new Size(344, 38);
+            SelectArmorStealthModCB.TabIndex = 56;
             // 
-            // StealthChange
+            // StealthChangeCheck
             // 
-            StealthChange.AutoSize = true;
-            StealthChange.Location = new Point(1044, 790);
-            StealthChange.Name = "StealthChange";
-            StealthChange.Size = new Size(182, 34);
-            StealthChange.TabIndex = 57;
-            StealthChange.Text = "Affects Stealth?";
-            StealthChange.UseVisualStyleBackColor = true;
+            StealthChangeCheck.AutoSize = true;
+            StealthChangeCheck.Location = new Point(1044, 790);
+            StealthChangeCheck.Name = "StealthChangeCheck";
+            StealthChangeCheck.Size = new Size(182, 34);
+            StealthChangeCheck.TabIndex = 57;
+            StealthChangeCheck.Text = "Affects Stealth?";
+            StealthChangeCheck.UseVisualStyleBackColor = true;
             // 
-            // checkCharges
+            // ChargesCheck
             // 
-            checkCharges.AutoSize = true;
-            checkCharges.Location = new Point(21, 912);
-            checkCharges.Name = "checkCharges";
-            checkCharges.Size = new Size(257, 34);
-            checkCharges.TabIndex = 58;
-            checkCharges.Text = "check if limited charges";
-            checkCharges.UseVisualStyleBackColor = true;
+            ChargesCheck.AutoSize = true;
+            ChargesCheck.Location = new Point(21, 912);
+            ChargesCheck.Name = "ChargesCheck";
+            ChargesCheck.Size = new Size(257, 34);
+            ChargesCheck.TabIndex = 58;
+            ChargesCheck.Text = "check if limited charges";
+            ChargesCheck.UseVisualStyleBackColor = true;
             // 
-            // Field36
+            // SelectChargesNI
             // 
-            Field36.Location = new Point(284, 911);
-            Field36.Name = "Field36";
-            Field36.Size = new Size(71, 35);
-            Field36.TabIndex = 59;
+            SelectChargesNI.Location = new Point(284, 911);
+            SelectChargesNI.Name = "SelectChargesNI";
+            SelectChargesNI.Size = new Size(71, 35);
+            SelectChargesNI.TabIndex = 59;
             // 
             // Field38
             // 
@@ -631,136 +631,136 @@
             ClientSize = new Size(1861, 965);
             Controls.Add(elementText);
             Controls.Add(Field38);
-            Controls.Add(Field36);
-            Controls.Add(checkCharges);
-            Controls.Add(StealthChange);
-            Controls.Add(Field34);
-            Controls.Add(Field32);
+            Controls.Add(SelectChargesNI);
+            Controls.Add(ChargesCheck);
+            Controls.Add(StealthChangeCheck);
+            Controls.Add(SelectArmorStealthModCB);
+            Controls.Add(SelectNameAddCB);
             Controls.Add(label15);
-            Controls.Add(StackedName);
-            Controls.Add(Field33);
-            Controls.Add(Field31);
-            Controls.Add(ArmorAbilModMax);
-            Controls.Add(ArmorAbilMod);
-            Controls.Add(Field30);
-            Controls.Add(Field29);
-            Controls.Add(FIeld28);
+            Controls.Add(NameAddCheck);
+            Controls.Add(SelectCustomNameAddTI);
+            Controls.Add(SelectACAbilModMaxNI);
+            Controls.Add(ACmaxModCheck);
+            Controls.Add(ArmorAbilCheck);
+            Controls.Add(SelectArmorAbilCB);
+            Controls.Add(SelectACFlatNI);
+            Controls.Add(SelectACModNI);
             Controls.Add(label14);
             Controls.Add(label13);
-            Controls.Add(Field27);
-            Controls.Add(AddImprovement);
-            Controls.Add(Field26);
+            Controls.Add(SelectImprovementTagTL);
+            Controls.Add(ImprovementCheck);
+            Controls.Add(SelectArmorTypeCB);
             Controls.Add(label12);
-            Controls.Add(Field25);
+            Controls.Add(SelectWpnTagTL);
             Controls.Add(label11);
-            Controls.Add(Field23);
+            Controls.Add(SelectEnhanceCB);
             Controls.Add(label10);
-            Controls.Add(Field22);
+            Controls.Add(SelectRarityCB);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(weight);
             Controls.Add(label7);
-            Controls.Add(Field21);
+            Controls.Add(SelectAttuneTL);
             Controls.Add(label6);
-            Controls.Add(Field20);
+            Controls.Add(SelectItemTypeCB);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(Field19);
-            Controls.Add(Field18);
-            Controls.Add(Field17);
-            Controls.Add(Field16);
+            Controls.Add(SelectDmgTypeCB);
+            Controls.Add(SelectDmgModNI);
+            Controls.Add(SelectDmgDiceCB);
+            Controls.Add(SelectNumberDiceNI);
             Controls.Add(label3);
-            Controls.Add(Field15);
+            Controls.Add(SelectLongRangeNI);
             Controls.Add(label2);
-            Controls.Add(Field14);
+            Controls.Add(SelectNormalRangeNI);
             Controls.Add(label1);
-            Controls.Add(Field13);
-            Controls.Add(Field12);
+            Controls.Add(SelectSlotTL);
+            Controls.Add(SelectFocusCB);
             Controls.Add(Generate);
-            Controls.Add(Field11);
-            Controls.Add(Field10);
-            Controls.Add(Field9);
-            Controls.Add(Field8);
+            Controls.Add(SelectWeightNI);
+            Controls.Add(SelectCurrencyCB);
+            Controls.Add(SelectCostNI);
+            Controls.Add(SelectCatCB);
             Controls.Add(Field6);
-            Controls.Add(Field4);
-            Controls.Add(Field3);
-            Controls.Add(Field2);
-            Controls.Add(Field1);
+            Controls.Add(SelectAuthorTI);
+            Controls.Add(SelectSourceTI);
+            Controls.Add(SelectTypeCB);
+            Controls.Add(SelectNameTI);
             Name = "Form1";
             Text = "Aurora Item Builder";
-            ((System.ComponentModel.ISupportInitialize)Field9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field14).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field15).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)FIeld28).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field29).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field31).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Field36).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectCostNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectWeightNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectNormalRangeNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectLongRangeNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectNumberDiceNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectDmgModNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectACModNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectACFlatNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectACAbilModMaxNI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)SelectChargesNI).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox Field1;
-        private ComboBox Field2;
-        private TextBox Field3;
-        private TextBox Field4;
+        private TextBox SelectNameTI;
+        private ComboBox SelectTypeCB;
+        private TextBox SelectSourceTI;
+        private TextBox SelectAuthorTI;
         private RichTextBox Field6;
-        private ComboBox Field8;
-        private NumericUpDown Field9;
-        private ComboBox Field10;
-        private NumericUpDown Field11;
+        private ComboBox SelectCatCB;
+        private NumericUpDown SelectCostNI;
+        private ComboBox SelectCurrencyCB;
+        private NumericUpDown SelectWeightNI;
         private ToolTip toolTip1;
         private Button Generate;
-        private ComboBox Field12;
-        private CheckedListBox Field13;
+        private ComboBox SelectFocusCB;
+        private CheckedListBox SelectSlotTL;
         private Label label1;
-        private NumericUpDown Field14;
+        private NumericUpDown SelectNormalRangeNI;
         private Label label2;
-        private NumericUpDown Field15;
+        private NumericUpDown SelectLongRangeNI;
         private Label label3;
-        private NumericUpDown Field16;
-        private ComboBox Field17;
-        private NumericUpDown Field18;
-        private ComboBox Field19;
+        private NumericUpDown SelectNumberDiceNI;
+        private ComboBox SelectDmgDiceCB;
+        private NumericUpDown SelectDmgModNI;
+        private ComboBox SelectDmgTypeCB;
         private Label label4;
         private Label label5;
-        private ComboBox Field20;
+        private ComboBox SelectItemTypeCB;
         private Label label6;
-        private CheckedListBox Field21;
+        private CheckedListBox SelectAttuneTL;
         private Label label7;
         private Label weight;
         private Label label8;
         private Label label9;
-        private ComboBox Field22;
+        private ComboBox SelectRarityCB;
         private Label label10;
-        private ComboBox Field23;
+        private ComboBox SelectEnhanceCB;
         private Label label11;
-        private CheckedListBox Field25;
+        private CheckedListBox SelectWpnTagTL;
         private Label label12;
-        private ComboBox Field26;
-        private CheckBox AddImprovement;
-        private CheckedListBox Field27;
+        private ComboBox SelectArmorTypeCB;
+        private CheckBox ImprovementCheck;
+        private CheckedListBox SelectImprovementTagTL;
         private Label label13;
         private Label label14;
-        private NumericUpDown FIeld28;
+        private NumericUpDown SelectACModNI;
         private ToolTip toolTip2;
-        private NumericUpDown Field29;
-        private ComboBox Field30;
-        private CheckBox ArmorAbilMod;
-        private CheckBox ArmorAbilModMax;
-        private NumericUpDown Field31;
-        private TextBox Field33;
-        private CheckBox StackedName;
+        private NumericUpDown SelectACFlatNI;
+        private ComboBox SelectArmorAbilCB;
+        private CheckBox ArmorAbilCheck;
+        private CheckBox ACmaxModCheck;
+        private NumericUpDown SelectACAbilModMaxNI;
+        private TextBox SelectCustomNameAddTI;
+        private CheckBox NameAddCheck;
         private Label label15;
-        private ComboBox Field32;
-        private ComboBox Field34;
-        private CheckBox StealthChange;
-        private CheckBox checkCharges;
-        private NumericUpDown Field36;
+        private ComboBox SelectNameAddCB;
+        private ComboBox SelectArmorStealthModCB;
+        private CheckBox StealthChangeCheck;
+        private CheckBox ChargesCheck;
+        private NumericUpDown SelectChargesNI;
         private CheckBox Field38;
         private RichTextBox elementText;
     }
