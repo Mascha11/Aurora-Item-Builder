@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Aurora_Item_Builder
 {
     public partial class Form2 : Form
 
-
-
     {
+        public string skillList = "skills.txt";
         public Form2()
         {
             InitializeComponent();
@@ -49,6 +49,7 @@ namespace Aurora_Item_Builder
         private void RuleBuilder2_SelectionChangeCommitted(object sender, EventArgs e)
         {
             string Rule2 = RuleBuilder2.SelectedItem?.ToString();
+            RuleBuilder3.Text = "";
             RuleBuilder3.Items.Clear();
             if (Rule2 == "Speed")
             {
@@ -94,34 +95,51 @@ namespace Aurora_Item_Builder
 
         private void RuleBuilder3_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string Rule3 = RuleBuilder3.SelectedItem?.ToString();
-            string Rule2 = RuleBuilder2.SelectedItem?.ToString();
-            RuleBuilder4.Items.Clear();
+            
+                string Rule3 = RuleBuilder3.SelectedItem?.ToString();
+                string Rule2 = RuleBuilder2.SelectedItem?.ToString();
+                RuleBuilder4.Text = "";
+                RuleBuilder4.Items.Clear();
+            if (RuleBuilder3.SelectedItem != null)
+            {
+                richTextBox1.AppendText(RuleBuilder3.SelectedItem.ToString() + Environment.NewLine);
+            }
 
-            if (Rule2 == "Ability")
-            {
-                RuleBuilder4.Visible = true;
-                RuleBuilder4.Items.Add("Strength");
-                RuleBuilder4.Items.Add("Dexterity");
-                RuleBuilder4.Items.Add("Constitution");
-                RuleBuilder4.Items.Add("Intelligence");
-                RuleBuilder4.Items.Add("Wisdom");
-                RuleBuilder4.Items.Add("Charisma");
-            }
-            if (Rule3 == "Ability")
-            {
-                RuleBuilder4.Visible = true;
-                RuleBuilder4.Items.Add("Strength");
-                RuleBuilder4.Items.Add("Dexterity");
-                RuleBuilder4.Items.Add("Constitution");
-                RuleBuilder4.Items.Add("Intelligence");
-                RuleBuilder4.Items.Add("Wisdom");
-                RuleBuilder4.Items.Add("Charisma");
-            }
-            if (Rule3 == "Skill")
-            {
-                RuleBuilder4.Visible = true;
-                RuleBuilder4.Items.Add("Acrobatics");
+            if (Rule3 == "set Score" || Rule3 == "add to Score" || Rule3 == "change max Score")
+                {
+                    bool RuleField4Vis = true;
+                    RuleBuilder4.Visible = RuleField4Vis;
+
+                    RuleBuilder4.Items.Add("Strength");
+                    RuleBuilder4.Items.Add("Dexterity");
+                    RuleBuilder4.Items.Add("Constitution");
+                    RuleBuilder4.Items.Add("Intelligence");
+                    RuleBuilder4.Items.Add("Wisdom");
+                    RuleBuilder4.Items.Add("Charisma");
+                }
+                if (Rule3 == "Ability")
+                {
+                    RuleBuilder4.Visible = true;
+                    RuleBuilder4.Items.Add("Strength");
+                    RuleBuilder4.Items.Add("Dexterity");
+                    RuleBuilder4.Items.Add("Constitution");
+                    RuleBuilder4.Items.Add("Intelligence");
+                    RuleBuilder4.Items.Add("Wisdom");
+                    RuleBuilder4.Items.Add("Charisma");
+                }
+                if (Rule3 == "Skill")
+                {
+                    bool RuleField4Vis = true;
+                    RuleBuilder4.Visible = RuleField4Vis;
+               
+                // Get the skills list from the resources
+                string skillsString = Properties.Resources.skillList;
+                List<string> skillList = skillsString.Split(',').ToList();
+
+                // Populate the ComboBox with the skills list
+                RuleBuilder4.Items.AddRange(skillList.ToArray());
+
+                /*RuleBuilder4.Items.Add("Acrobatics");
                 RuleBuilder4.Items.Add("Animal Handling");
                 RuleBuilder4.Items.Add("Arcana");
                 RuleBuilder4.Items.Add("Athletics");
@@ -138,14 +156,20 @@ namespace Aurora_Item_Builder
                 RuleBuilder4.Items.Add("Religion");
                 RuleBuilder4.Items.Add("Sleight of Hand");
                 RuleBuilder4.Items.Add("Stealth");
-                RuleBuilder4.Items.Add("Survival");
+                RuleBuilder4.Items.Add("Survival");*/
             }
             if (Rule3 == "Spell")
-            {
-                RuleBuilder4.Visible= true;
-                RuleBuilder4.Items.Add("Attack");
-                RuleBuilder4.Items.Add("Spell DC");
-            }
+                {
+                    RuleBuilder4.Visible = true;
+                    RuleBuilder4.Items.Add("Attack");
+                    RuleBuilder4.Items.Add("Spell DC");
+                }
+               /* else
+                {
+                    bool RuleField4Vis = false;
+                    RuleBuilder4.Visible = RuleField4Vis;
+                }*/
+            
         }
     }
 }

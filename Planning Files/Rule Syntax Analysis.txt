@@ -61,7 +61,23 @@
                     "spellcasting:dc"                   "2"                                                                 #Add 2 to Spell save DC
 
 <grant type=        "Condition"                         id="ID_INTERNAL_CONDITION_"     requirements="!ID_SRD_RACE_DWARF"   #Gives Condition if not Dwarf
+                            _DAMAGE_RESISTANCE_
+                                _ACID
+                                ...
+                            _DAMAGE_IMMUNITY_
+                            _VULNERABILITY_
                     "Proficiency"                       "ID_PROFICIENCY_"
+                                                            _SKILL_
+                                                                _ACROBATICS
+                                                            _GAMING_SET_PROFICIENCY_
+                                                                _DICE_SET
+                                                            _WEAPON_PROFICIENCY_
+                                                                _JAVELIN
+                                                                _MARTIAL_WEAPONS
+                                                            _ARMOR_PROFICIENCY_
+                                                                _CHAIN_SHIRT
+                                                            _TOOL_PROFICIENCY_
+                                                                _BREWERS_SUPPLIES
                     "Vision"                            "ID_VISION_*Name*"      
                     "Language"                          "ID_LANGUAGE_*Name*"
 
