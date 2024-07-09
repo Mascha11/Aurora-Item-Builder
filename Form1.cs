@@ -10,6 +10,9 @@ namespace Aurora_Item_Builder
         public Form1()
         {
             InitializeComponent();
+            string TypeString = Properties.Resources.ElementType;
+            List<string> TypeList = TypeString.Split(',').ToList();
+            SelectTypeCB.Items.AddRange(TypeList.ToArray());
         }
 
 
@@ -135,6 +138,13 @@ namespace Aurora_Item_Builder
 
 
             form2.Show();
+        }
+
+        private void SelectTypeCB_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            /*string TypeString = Properties.Resources.AbilityList;
+            List<string> TypeList = TypeString.Split(',').ToList();
+            SelectTypeCB.Items.AddRange(TypeList.ToArray());*/
         }
     }
 }

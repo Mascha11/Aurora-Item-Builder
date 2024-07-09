@@ -70,6 +70,15 @@ namespace Aurora_Item_Builder.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Magic Item,Weapon,Weapon Property,Item ähnelt.
+        /// </summary>
+        internal static string ElementType {
+            get {
+                return ResourceManager.GetString("ElementType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Acrobatics,Animal Handling,Arcana,Athletics,Deception,History,Insight,Intimidation,Investigation,Medicine,Nature,Perception,Performance,Persuasion,Religion,Sleight of Hand,Stealth,Survival ähnelt.
         /// </summary>
         internal static string skillList {

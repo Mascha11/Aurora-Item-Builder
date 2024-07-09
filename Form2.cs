@@ -22,6 +22,7 @@ namespace Aurora_Item_Builder
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private void RuleBuilder1_SelectionChangeCommitted(object sender, EventArgs e)

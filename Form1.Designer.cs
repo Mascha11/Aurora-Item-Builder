@@ -112,13 +112,13 @@
             // 
             // SelectTypeCB
             // 
-            SelectTypeCB.Items.AddRange(new object[] { "Magic Item", "Weapon", "Weapon Property", "Item" });
             SelectTypeCB.Location = new Point(265, 24);
             SelectTypeCB.Name = "SelectTypeCB";
             SelectTypeCB.Size = new Size(212, 38);
             SelectTypeCB.TabIndex = 2;
             SelectTypeCB.Text = "Choose Type";
             toolTip1.SetToolTip(SelectTypeCB, "Choose what Type you want to add");
+            SelectTypeCB.DrawItem += SelectTypeCB_DrawItem;
             // 
             // SelectSourceTI
             // 

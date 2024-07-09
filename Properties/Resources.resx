@@ -120,6 +120,9 @@
   <data name="AbilityList" xml:space="preserve">
     <value>Strength,Dexterity,Constitution,Intelligence,Wisdom,Charisma</value>
   </data>
+  <data name="ElementType" xml:space="preserve">
+    <value>Magic Item,Weapon,Weapon Property,Item</value>
+  </data>
   <data name="skillList" xml:space="preserve">
     <value>Acrobatics,Animal Handling,Arcana,Athletics,Deception,History,Insight,Intimidation,Investigation,Medicine,Nature,Perception,Performance,Persuasion,Religion,Sleight of Hand,Stealth,Survival</value>
   </data>
