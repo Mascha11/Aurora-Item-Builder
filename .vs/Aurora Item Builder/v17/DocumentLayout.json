@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\planning files\\rule syntax analysis.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:planning files\\rule syntax analysis.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\planning files\\rule syntax analysis.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:planning files\\rule syntax analysis.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\planning files\\planning.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:planning files\\planning.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -50,25 +50,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Resources.resx",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Properties\\Resources.resx*",
-              "RelativeToolTip": "Properties\\Resources.resx*",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Properties\\Resources.resx",
+              "RelativeToolTip": "Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2024-07-09T22:15:53.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAuwB4AAAAcAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAuwGoAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T19:29:38.768Z",
               "EditorCaption": ""
@@ -81,28 +81,16 @@
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form2.cs",
               "RelativeToolTip": "Form2.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAuwIkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T19:57:19.337Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Rule Syntax Analysis.txt",
-              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning Files\\Rule Syntax Analysis.txt",
-              "RelativeDocumentMoniker": "Planning Files\\Rule Syntax Analysis.txt",
-              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning Files\\Rule Syntax Analysis.txt",
-              "RelativeToolTip": "Planning Files\\Rule Syntax Analysis.txt",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAA0AAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-07-08T20:00:22.85Z"
             }
           ]
         },
         {
           "DockedWidth": 192,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Form2.cs [Entwurf]",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
@@ -140,9 +128,22 @@
               "RelativeDocumentMoniker": "Planning Files\\Planning.txt",
               "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning Files\\Planning.txt",
               "RelativeToolTip": "Planning Files\\Planning.txt",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEQAAAAgAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEQAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-07-03T19:16:35.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rule Syntax Analysis.txt",
+              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning Files\\Rule Syntax Analysis.txt",
+              "RelativeDocumentMoniker": "Planning Files\\Rule Syntax Analysis.txt",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Planning Files\\Rule Syntax Analysis.txt",
+              "RelativeToolTip": "Planning Files\\Rule Syntax Analysis.txt",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAA0AAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-07-08T20:00:22.85Z",
               "EditorCaption": ""
             },
             {

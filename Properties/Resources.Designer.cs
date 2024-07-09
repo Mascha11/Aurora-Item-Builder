@@ -61,6 +61,15 @@ namespace Aurora_Item_Builder.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Strength,Dexterity,Constitution,Intelligence,Wisdom,Charisma ähnelt.
+        /// </summary>
+        internal static string AbilityList {
+            get {
+                return ResourceManager.GetString("AbilityList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Acrobatics,Animal Handling,Arcana,Athletics,Deception,History,Insight,Intimidation,Investigation,Medicine,Nature,Perception,Performance,Persuasion,Religion,Sleight of Hand,Stealth,Survival ähnelt.
         /// </summary>
         internal static string skillList {

@@ -33,6 +33,8 @@
             RuleBuilder3 = new ComboBox();
             RuleBuilder4 = new ComboBox();
             richTextBox1 = new RichTextBox();
+            richTextBox2 = new RichTextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // RuleBuilder1
@@ -79,11 +81,31 @@
             richTextBox1.TabIndex = 5;
             richTextBox1.Text = "";
             // 
+            // richTextBox2
+            // 
+            richTextBox2.Location = new Point(12, 472);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(760, 232);
+            richTextBox2.TabIndex = 6;
+            richTextBox2.Text = "";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(12, 426);
+            button1.Name = "button1";
+            button1.Size = new Size(439, 40);
+            button1.TabIndex = 7;
+            button1.Text = "Generate Rules String";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 716);
+            Controls.Add(button1);
+            Controls.Add(richTextBox2);
             Controls.Add(richTextBox1);
             Controls.Add(RuleBuilder4);
             Controls.Add(RuleBuilder3);
@@ -100,5 +122,7 @@
         private ComboBox RuleBuilder3;
         private ComboBox RuleBuilder4;
         private RichTextBox richTextBox1;
+        private RichTextBox richTextBox2;
+        private Button button1;
     }
 }

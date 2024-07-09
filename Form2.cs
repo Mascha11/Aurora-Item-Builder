@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.Linq;
 
 namespace Aurora_Item_Builder
 {
     public partial class Form2 : Form
 
-    {
-        public string skillList = "skills.txt";
+    {   private string Rule1;
+        private string Rule2;
+        private string Rule3;
+        private string Rule4;
         public Form2()
         {
             InitializeComponent();
@@ -23,7 +26,7 @@ namespace Aurora_Item_Builder
 
         private void RuleBuilder1_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string Rule1 = RuleBuilder1.SelectedItem?.ToString();
+                Rule1 = RuleBuilder1.SelectedItem?.ToString();
             RuleBuilder1.Text = Rule1;
             RuleBuilder2.Items.Clear();
             if (Rule1 == "change stat")
@@ -48,7 +51,7 @@ namespace Aurora_Item_Builder
 
         private void RuleBuilder2_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string Rule2 = RuleBuilder2.SelectedItem?.ToString();
+            Rule2 = RuleBuilder2.SelectedItem?.ToString();
             RuleBuilder3.Text = "";
             RuleBuilder3.Items.Clear();
             if (Rule2 == "Speed")
@@ -95,43 +98,37 @@ namespace Aurora_Item_Builder
 
         private void RuleBuilder3_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            
-                string Rule3 = RuleBuilder3.SelectedItem?.ToString();
-                string Rule2 = RuleBuilder2.SelectedItem?.ToString();
-                RuleBuilder4.Text = "";
-                RuleBuilder4.Items.Clear();
+
+            Rule3 = RuleBuilder3.SelectedItem?.ToString();
+            string CheckRule2 = Rule2;
+            RuleBuilder4.Text = "";
+            RuleBuilder4.Items.Clear();
             if (RuleBuilder3.SelectedItem != null)
             {
                 richTextBox1.AppendText(RuleBuilder3.SelectedItem.ToString() + Environment.NewLine);
             }
 
             if (Rule3 == "set Score" || Rule3 == "add to Score" || Rule3 == "change max Score")
-                {
-                    bool RuleField4Vis = true;
-                    RuleBuilder4.Visible = RuleField4Vis;
+            {
+                bool RuleField4Vis = true;
+                RuleBuilder4.Visible = RuleField4Vis;
 
-                    RuleBuilder4.Items.Add("Strength");
-                    RuleBuilder4.Items.Add("Dexterity");
-                    RuleBuilder4.Items.Add("Constitution");
-                    RuleBuilder4.Items.Add("Intelligence");
-                    RuleBuilder4.Items.Add("Wisdom");
-                    RuleBuilder4.Items.Add("Charisma");
-                }
-                if (Rule3 == "Ability")
-                {
-                    RuleBuilder4.Visible = true;
-                    RuleBuilder4.Items.Add("Strength");
-                    RuleBuilder4.Items.Add("Dexterity");
-                    RuleBuilder4.Items.Add("Constitution");
-                    RuleBuilder4.Items.Add("Intelligence");
-                    RuleBuilder4.Items.Add("Wisdom");
-                    RuleBuilder4.Items.Add("Charisma");
-                }
-                if (Rule3 == "Skill")
-                {
-                    bool RuleField4Vis = true;
-                    RuleBuilder4.Visible = RuleField4Vis;
-               
+                string AbilString = Properties.Resources.AbilityList;
+                List<string> AbilList = AbilString.Split(',').ToList();
+                RuleBuilder4.Items.AddRange(AbilList.ToArray());
+
+            }
+            if (Rule3 == "Ability")
+            {
+                string AbilString = Properties.Resources.AbilityList;
+                List<string> AbilList = AbilString.Split(',').ToList();
+                RuleBuilder4.Items.AddRange(AbilList.ToArray());
+            }
+            if (Rule3 == "Skill")
+            {
+                bool RuleField4Vis = true;
+                RuleBuilder4.Visible = RuleField4Vis;
+
                 // Get the skills list from the resources
                 string skillsString = Properties.Resources.skillList;
                 List<string> skillList = skillsString.Split(',').ToList();
@@ -139,37 +136,34 @@ namespace Aurora_Item_Builder
                 // Populate the ComboBox with the skills list
                 RuleBuilder4.Items.AddRange(skillList.ToArray());
 
-                /*RuleBuilder4.Items.Add("Acrobatics");
-                RuleBuilder4.Items.Add("Animal Handling");
-                RuleBuilder4.Items.Add("Arcana");
-                RuleBuilder4.Items.Add("Athletics");
-                RuleBuilder4.Items.Add("Deception");
-                RuleBuilder4.Items.Add("History");
-                RuleBuilder4.Items.Add("Insight");
-                RuleBuilder4.Items.Add("Intimidation");
-                RuleBuilder4.Items.Add("Investigation");
-                RuleBuilder4.Items.Add("Medicine");
-                RuleBuilder4.Items.Add("Nature");
-                RuleBuilder4.Items.Add("Perception");
-                RuleBuilder4.Items.Add("Performance");
-                RuleBuilder4.Items.Add("Persuasion");
-                RuleBuilder4.Items.Add("Religion");
-                RuleBuilder4.Items.Add("Sleight of Hand");
-                RuleBuilder4.Items.Add("Stealth");
-                RuleBuilder4.Items.Add("Survival");*/
             }
             if (Rule3 == "Spell")
-                {
-                    RuleBuilder4.Visible = true;
-                    RuleBuilder4.Items.Add("Attack");
-                    RuleBuilder4.Items.Add("Spell DC");
-                }
-               /* else
-                {
-                    bool RuleField4Vis = false;
-                    RuleBuilder4.Visible = RuleField4Vis;
-                }*/
-            
+            {
+                RuleBuilder4.Visible = true;
+                RuleBuilder4.Items.Add("Attack");
+                RuleBuilder4.Items.Add("Spell DC");
+            }
+            /* else
+             {
+                 bool RuleField4Vis = false;
+                 RuleBuilder4.Visible = RuleField4Vis;
+             }*/
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string CheckRule1 = Rule1;
+            string BuildStrPt1 = string.Empty;
+            if (CheckRule1 == "change stat") { BuildStrPt1 = "<stat name="; }
+            if (CheckRule1 == "grant something") { BuildStrPt1 = "<grant type="; }
+
+            StringBuilder output = new StringBuilder();
+            output.AppendLine("<rules>");
+            output.AppendLine(BuildStrPt1);
+            output.AppendLine(CheckRule1);
+
+            richTextBox2.Text = output.ToString();
         }
     }
 }
