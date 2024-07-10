@@ -150,9 +150,13 @@ namespace Aurora_Item_Builder
             string CheckRule1 = Rule1;
             string CheckRule2 = Rule2;
             string CheckRule3 = Rule3;
-            string convRule3 = Rule3.ToLower();
+            string convRule3 = string.Empty;
+            if (!string.IsNullOrEmpty(CheckRule3))
+            { convRule3 = CheckRule3.ToLower(); }
             string CheckRule4 = Rule4;
-            string convRule4 = Rule4.ToLower();
+            string convRule4 = string.Empty;
+            if (!string.IsNullOrEmpty(CheckRule4))
+            { convRule4 = CheckRule4.ToLower(); }
             string BuildStrPt1 = string.Empty;
             string BuildStrPt2 = string.Empty;
             string BuildStrPt3 = string.Empty;
@@ -161,20 +165,25 @@ namespace Aurora_Item_Builder
                 BuildStrPt1 = "<stat name=";
                 if (CheckRule2 == "Speed")
                 {
-                    BuildStrPt2 = "\"speed";
+                    if (CheckRule3 == "Base")
+                    { BuildStrPt2 = "\"speed\""; }
+                    else
+                    {
+                        BuildStrPt2 = "\"speed:" + convRule3 + "\"";
+                    }
                 }
                 if (CheckRule2 == "Ability")
                 {
                     BuildStrPt2 = "\"" + convRule4;
-                        if (CheckRule3 == "set Score")
+                    if (CheckRule3 == "set Score")
                     {
                         BuildStrPt3 = ":score:set\"";
                     }
-                        if (CheckRule3 == "add to Score")
+                    if (CheckRule3 == "add to Score")
                     {
                         BuildStrPt3 = "\"";
                     }
-                        if (CheckRule3 == "change Max Score")
+                    if (CheckRule3 == "change max Score")
                     {
                         BuildStrPt3 = ":max\"";
                     }
@@ -193,20 +202,63 @@ namespace Aurora_Item_Builder
                     {
                         BuildStrPt2 = "\"" + convRule4 + ":misc";
                     }
+                    if (CheckRule3 == "Spell")
+                    {
+                        if (CheckRule4 == "Attack")
+                        { BuildStrPt2 = "\"spellcasting:attack\""; }
+                        if (CheckRule4 == "Spell DC")
+                        { BuildStrPt2 = "\"spellcasting:dc\""; }
+                    }
+                }
+                if (CheckRule2 == "Damage")
+                {
+                    if (CheckRule3 != "More...")
+                    {
+                        BuildStrPt2 = "\"" + convRule3 + ":damage\"";
+                    }
+                }
+                if (CheckRule2 == "AC")
+                {
+                    BuildStrPt2 = "\"ac:misc\"";
+                }
+                if (CheckRule2 == "Proficiency")
+                {
+                    BuildStrPt2 = "\"proficiency\"";
+                }
+                if (CheckRule2 == "Initiative")
+                {
+                    BuildStrPt2 = "\"initiative\"";
                 }
             }
+
             if (CheckRule1 == "grant something") { BuildStrPt1 = "<grant type="; }
 
             StringBuilder output = new StringBuilder();
             //output.AppendLine("<rules>");
-            output.AppendLine(BuildStrPt1);
+            output.AppendLine(BuildStrPt1 + BuildStrPt2 + BuildStrPt3);
 
             richTextBox2.Text = output.ToString();
+
+            //var Debugging:
+            StringBuilder Text1 = new StringBuilder();
+            Text1.AppendLine("Test");
+            Text1.AppendLine(CheckRule1);
+            Text1.AppendLine(CheckRule2);
+            Text1.AppendLine(CheckRule3);
+            Text1.AppendLine(CheckRule4);
+            Text1.AppendLine(convRule3);
+            Text1.AppendLine(convRule4);
+            richTextBox1.Text = Text1.ToString();
         }
 
         private void RuleBuilder4_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Rule4 = RuleBuilder4.SelectedItem?.ToString();
+            richTextBox1.AppendText(RuleBuilder4.SelectedItem.ToString() + Environment.NewLine);
+            richTextBox1.AppendText(Rule4 + Environment.NewLine);
+
         }
     }
+
 }
+    
