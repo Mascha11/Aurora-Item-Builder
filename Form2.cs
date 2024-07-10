@@ -15,7 +15,8 @@ namespace Aurora_Item_Builder
 {
     public partial class Form2 : Form
 
-    {   private string Rule1;
+    {
+        private string Rule1;
         private string Rule2;
         private string Rule3;
         private string Rule4;
@@ -27,7 +28,7 @@ namespace Aurora_Item_Builder
 
         private void RuleBuilder1_SelectionChangeCommitted(object sender, EventArgs e)
         {
-                Rule1 = RuleBuilder1.SelectedItem?.ToString();
+            Rule1 = RuleBuilder1.SelectedItem?.ToString();
             RuleBuilder1.Text = Rule1;
             RuleBuilder2.Items.Clear();
             if (Rule1 == "change stat")
@@ -130,11 +131,8 @@ namespace Aurora_Item_Builder
                 bool RuleField4Vis = true;
                 RuleBuilder4.Visible = RuleField4Vis;
 
-                // Get the skills list from the resources
                 string skillsString = Properties.Resources.skillList;
                 List<string> skillList = skillsString.Split(',').ToList();
-
-                // Populate the ComboBox with the skills list
                 RuleBuilder4.Items.AddRange(skillList.ToArray());
 
             }
@@ -144,27 +142,71 @@ namespace Aurora_Item_Builder
                 RuleBuilder4.Items.Add("Attack");
                 RuleBuilder4.Items.Add("Spell DC");
             }
-            /* else
-             {
-                 bool RuleField4Vis = false;
-                 RuleBuilder4.Visible = RuleField4Vis;
-             }*/
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string CheckRule1 = Rule1;
+            string CheckRule2 = Rule2;
+            string CheckRule3 = Rule3;
+            string convRule3 = Rule3.ToLower();
+            string CheckRule4 = Rule4;
+            string convRule4 = Rule4.ToLower();
             string BuildStrPt1 = string.Empty;
-            if (CheckRule1 == "change stat") { BuildStrPt1 = "<stat name="; }
+            string BuildStrPt2 = string.Empty;
+            string BuildStrPt3 = string.Empty;
+            if (CheckRule1 == "change stat")
+            {
+                BuildStrPt1 = "<stat name=";
+                if (CheckRule2 == "Speed")
+                {
+                    BuildStrPt2 = "\"speed";
+                }
+                if (CheckRule2 == "Ability")
+                {
+                    BuildStrPt2 = "\"" + convRule4;
+                        if (CheckRule3 == "set Score")
+                    {
+                        BuildStrPt3 = ":score:set\"";
+                    }
+                        if (CheckRule3 == "add to Score")
+                    {
+                        BuildStrPt3 = "\"";
+                    }
+                        if (CheckRule3 == "change Max Score")
+                    {
+                        BuildStrPt3 = ":max\"";
+                    }
+                }
+                if (CheckRule2 == "Vision")
+                {
+                    BuildStrPt2 = "\"" + convRule3 + ":range\"";
+                }
+                if (CheckRule2 == "Check")
+                {
+                    if (CheckRule3 == "Ability")
+                    {
+                        BuildStrPt2 = "\"" + convRule4 + ":save:misc\"";
+                    }
+                    if (CheckRule3 == "Skill")
+                    {
+                        BuildStrPt2 = "\"" + convRule4 + ":misc";
+                    }
+                }
+            }
             if (CheckRule1 == "grant something") { BuildStrPt1 = "<grant type="; }
 
             StringBuilder output = new StringBuilder();
-            output.AppendLine("<rules>");
+            //output.AppendLine("<rules>");
             output.AppendLine(BuildStrPt1);
-            output.AppendLine(CheckRule1);
 
             richTextBox2.Text = output.ToString();
+        }
+
+        private void RuleBuilder4_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Rule4 = RuleBuilder4.SelectedItem?.ToString();
         }
     }
 }

@@ -72,6 +72,7 @@
             RuleBuilder4.Name = "RuleBuilder4";
             RuleBuilder4.Size = new Size(212, 38);
             RuleBuilder4.TabIndex = 4;
+            RuleBuilder4.SelectionChangeCommitted += RuleBuilder4_SelectionChangeCommitted;
             // 
             // richTextBox1
             // 
