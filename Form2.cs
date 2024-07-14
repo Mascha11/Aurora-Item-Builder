@@ -50,6 +50,8 @@ namespace Aurora_Item_Builder
                 RuleBuilder2.Items.Add("Grant Proficiency");
                 RuleBuilder2.Items.Add("Grant Vision");
                 RuleBuilder2.Items.Add("Grant Language");
+                RuleBuilderValue.Visible = false;
+                RuleBuilder4.Visible = false;
             }
         }
 
@@ -77,11 +79,9 @@ namespace Aurora_Item_Builder
             if (Rule2 == "Vision")
             {
                 RuleBuilder4.Visible = false;
-                RuleBuilder3.Items.Add("Darkvision");
-                RuleBuilder3.Items.Add("Blindsight");
-                RuleBuilder3.Items.Add("Truesight");
-                RuleBuilder3.Items.Add("Tremorsense");
-                RuleBuilder3.Items.Add("Mindsight");
+                string VisionString = Properties.Resources.Vision;
+                List<string> visionList = VisionString.Split(',').ToList();
+                RuleBuilder3.Items.AddRange(visionList.ToArray());
                 RuleBuilderValue.Minimum = 0;
                 RuleBuilderValue.Maximum = 100;
 
@@ -105,6 +105,37 @@ namespace Aurora_Item_Builder
                 RuleBuilder3.Items.Add("Natural");
                 RuleBuilder3.Items.Add("More...");
             }
+            if (Rule2 == "Grant Condition")
+            {   //RuleBuilder4.Visible=false;
+                RuleBuilder3.Items.Add("Damage Immunity");
+                RuleBuilder3.Items.Add("Damage Resistance");
+                RuleBuilder3.Items.Add("Damage Vulnerability");
+
+                string DamageString = Properties.Resources.DamageTypes;
+                List<string> DamageList = DamageString.Split(',').ToList();
+                RuleBuilder4.Items.AddRange(DamageList.ToArray());
+            }
+            if (Rule2 == "Grant Proficiency")
+            {
+                RuleBuilder3.Items.Add("Skill");
+                RuleBuilder3.Items.Add("Gaming Set");
+                RuleBuilder3.Items.Add("Weapon");
+                RuleBuilder3.Items.Add("Armor");
+                RuleBuilder3.Items.Add("Tool");
+            }
+            if (Rule2 == "Grant Vision")
+            {
+                string VisionString = Properties.Resources.Vision;
+                List<string> visionList = VisionString.Split(',').ToList();
+                RuleBuilder3.Items.AddRange(visionList.ToArray());
+            }
+            if (Rule2 == "Grant Language")
+            {
+                RuleBuilder4.Visible = false;
+                string LanguageString = Properties.Resources.LanguageList;
+                List<string> LangList = LanguageString.Split(',').ToList();
+                RuleBuilder3.Items.AddRange(LangList.ToArray());
+            }
         }
 
         private void RuleBuilder3_SelectionChangeCommitted(object sender, EventArgs e)
@@ -113,7 +144,7 @@ namespace Aurora_Item_Builder
             Rule3 = RuleBuilder3.SelectedItem?.ToString();
             string CheckRule2 = Rule2;
             RuleBuilder4.Text = "";
-            RuleBuilder4.Items.Clear();
+            if (Rule2 != "Grant Condition" ) { RuleBuilder4.Items.Clear(); }
             if (RuleBuilder3.SelectedItem != null)
             {
                 //richTextBox1.AppendText(RuleBuilder3.SelectedItem.ToString() + Environment.NewLine);
@@ -151,7 +182,59 @@ namespace Aurora_Item_Builder
                 RuleBuilder4.Items.Add("Attack");
                 RuleBuilder4.Items.Add("Spell DC");
             }
+            if (Rule3 == "Gaming Set")
+            {
+                string gamingString = Properties.Resources.GamingSets;
+                List<string> gameList = gamingString.Split(',').ToList();
+                RuleBuilder4.Items.AddRange(gameList.ToArray());
+            }
+            if (Rule3 == "Weapon")
+            {
+                string WeaponString = Properties.Resources.WeaponProfs;
+                List<string> WeaponList = WeaponString.Split(',').ToList();
+                RuleBuilder4.Items.AddRange(WeaponList.ToArray());
+            }
+            if (Rule3 == "Armor")
+            {
+                string ArmorString = Properties.Resources.ArmorProfs;
+                List<string> ArmorList = ArmorString.Split(',').ToList();
+                RuleBuilder4.Items.AddRange(ArmorList.ToArray());
+            }
+            if (Rule3 == "Tool")
+            {
+                RuleBuilder4.Visible = true;
+                RuleBuilder4.Items.Add("Tools and Supplies");
+                RuleBuilder4.Items.Add("Instruments");
+            }
 
+
+        }
+        private void RuleBuilder4_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            /* Rule4 = RuleBuilder4.SelectedItem?.ToString();
+             richTextBox1.AppendText(RuleBuilder4.SelectedItem.ToString() + Environment.NewLine);
+             richTextBox1.AppendText(Rule4 + Environment.NewLine);*/
+            Rule4 = RuleBuilder4.SelectedItem?.ToString();
+            string CheckRule3 = Rule3;
+            RuleBuilder5.Text = "";
+            RuleBuilder5.Items.Clear();
+            if (Rule4 == "Tools and Supplies")
+            {
+                RuleBuilder5.Visible = true;
+                string ToolString = Properties.Resources.Tools;
+                string[] allTools = ToolString.Split(',');
+                List<string> selectedTools = allTools.Skip(10).Take(25).ToList();
+                RuleBuilder5.Items.AddRange(selectedTools.ToArray());
+            }
+            if (Rule4 == "Instruments")
+            {
+                RuleBuilder5.Visible = true;
+                RuleBuilder5.Visible = true;
+                string ToolString = Properties.Resources.Tools;
+                string[] allTools = ToolString.Split(',');
+                List<string> selectedTools = allTools.Take(10).ToList();
+                RuleBuilder5.Items.AddRange(selectedTools.ToArray());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -284,13 +367,7 @@ namespace Aurora_Item_Builder
             richTextBox1.Text = Text1.ToString();*/
         }
 
-        private void RuleBuilder4_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-           /* Rule4 = RuleBuilder4.SelectedItem?.ToString();
-            richTextBox1.AppendText(RuleBuilder4.SelectedItem.ToString() + Environment.NewLine);
-            richTextBox1.AppendText(Rule4 + Environment.NewLine);*/
 
-        }
 
         private void RuleBuilderValue_ValueChanged(object sender, EventArgs e)
         {

@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|w:\\aktive projekte\\programmieren\\aurora item builder\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8619CD1E-9E91-4229-95BB-1469B93BA542}|Aurora Item Builder.csproj|W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Resources.resx",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
@@ -62,28 +62,28 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T19:29:38.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form2.cs",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form2.cs",
               "RelativeToolTip": "Form2.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAiwBABAAANAAAA",
+              "ViewState": "AQIAAFEBAAAAAAAAAAAEwHEBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T19:57:19.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAowBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T19:29:38.768Z",
               "EditorCaption": ""
             }
           ]
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form2.cs [Entwurf]",
               "DocumentMoniker": "W:\\aktive Projekte\\Programmieren\\Aurora Item Builder\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",

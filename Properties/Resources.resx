@@ -120,10 +120,32 @@
   <data name="AbilityList" xml:space="preserve">
     <value>Strength,Dexterity,Constitution,Intelligence,Wisdom,Charisma</value>
   </data>
+  <data name="ArmorProfs" xml:space="preserve">
+    <value>Light Armor,Medium Armor,Heavy Armor,Breastplate,Chain Shirt,Half Plate,Hide,Leather,Padded,Plate,Ring Mail,Scale Mail,Shields,Splint,Studded Leather</value>
+  </data>
+  <data name="DamageTypes" xml:space="preserve">
+    <value>Acid,Bludgeoning,Cold,Fire,Force,Lightning,Necrotic,Piercing,Poison,Psychic,Radiant,Slashing,Thunder</value>
+  </data>
   <data name="ElementType" xml:space="preserve">
     <value>Magic Item,Weapon,Weapon Property,Item</value>
   </data>
+  <data name="GamingSets" xml:space="preserve">
+    <value>Dice Set,Dragonchess Set,Playing Card Set,Three Dragon Ante Set</value>
+  </data>
+  <data name="LanguageList" xml:space="preserve">
+    <value>Abyssal,Common,Draconic,Dwarvish,Elvish,Giant,Gnomish,Goblin,Halfling,Infernal,Orc,Primordial,Sylvan,Undercommon</value>
+  </data>
   <data name="skillList" xml:space="preserve">
     <value>Acrobatics,Animal Handling,Arcana,Athletics,Deception,History,Insight,Intimidation,Investigation,Medicine,Nature,Perception,Performance,Persuasion,Religion,Sleight of Hand,Stealth,Survival</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Bagpipes,Drum,Dulcimer,Flute,Lute,Lyre,Horn,Pan Flute,Shawm,Viol,Alchemists Supplies,Brewers Supplies,Calligraphers Supplies,Carpenters Tools,Cartographers Tools,Cobblers Tools,Cooks Utensils,Disguise Kit,Forgery Kit,Glassblowers Tools,Herbalism Kit,Jewelers Tools,Leatherworker Tools,Masons Tools,Navigators Tools,Painters Supplies,Poisoners Kit,Potters Tools,Smiths Tools,Thieves Tools,Tinkers Tools,Weavers Tools,Woodcarvers Tools</value>
+    <comment>0 to 9 Instrument, 10-34 Supplies and Stuff</comment>
+  </data>
+  <data name="Vision" xml:space="preserve">
+    <value>Darkvision,Blindsight,Truesight,Tremorsense,Mindsight</value>
+  </data>
+  <data name="WeaponProfs" xml:space="preserve">
+    <value>Battleaxe,Blowgun,Club,Crossbow Hand,Crossbow Heavy,Crossbow Light,Dagger,Dart,Flail,Glaive,Greataxe,Greatsword,Halberd,Handaxe,Javelin,Lance,Light Hammer,Longbow,Longsword,Mace,Martial Weapons,Maul,Morningstar,Net,Pike,Quarterstaff,Rapier,Scimitar,Sickle,Simple Melee Weapons,Simple Weapons,Sling,Shortbow,Shortsword,Spear,Trident,War Pick,Warhammer,Whip</value>
   </data>
 </root>

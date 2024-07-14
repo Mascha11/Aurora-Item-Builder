@@ -1,0 +1,1 @@
+Javelin,Martial Weapons,Longbow,Shortbow,Simple Weapons,Crossbow Hand,Rapier,Shortsword,Club,Dagger,Dart,Mace,Quarterstaff,Scimitar,Sickle,Sling,Spear,Longsword,Crossbow Light,Simple Melee Weapons,Handaxe,Sling,Battleaxe,Flail,Glaive,Halberd,Lance,Greatsword,Greataxe,Maul,Morningstar,Pike,Rapier,Scimitar,Trident,War Pick,Warhammer,Whip,Blowgun,Net,Crossbow Heavy,Light Hammer

@@ -36,6 +36,7 @@
             button1 = new Button();
             RuleBuilderValue = new NumericUpDown();
             listBox1 = new ListBox();
+            RuleBuilder5 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)RuleBuilderValue).BeginInit();
             SuspendLayout();
             // 
@@ -96,7 +97,7 @@
             // 
             // RuleBuilderValue
             // 
-            RuleBuilderValue.Location = new Point(12, 260);
+            RuleBuilderValue.Location = new Point(12, 328);
             RuleBuilderValue.Name = "RuleBuilderValue";
             RuleBuilderValue.Size = new Size(210, 35);
             RuleBuilderValue.TabIndex = 8;
@@ -111,11 +112,21 @@
             listBox1.Size = new Size(331, 454);
             listBox1.TabIndex = 9;
             // 
+            // RuleBuilder5
+            // 
+            RuleBuilder5.FormattingEnabled = true;
+            RuleBuilder5.Location = new Point(12, 260);
+            RuleBuilder5.Name = "RuleBuilder5";
+            RuleBuilder5.Size = new Size(212, 38);
+            RuleBuilder5.TabIndex = 10;
+            RuleBuilder5.Visible = false;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 716);
+            Controls.Add(RuleBuilder5);
             Controls.Add(listBox1);
             Controls.Add(RuleBuilderValue);
             Controls.Add(button1);
@@ -139,5 +150,6 @@
         private Button button1;
         private NumericUpDown RuleBuilderValue;
         private ListBox listBox1;
+        private ComboBox RuleBuilder5;
     }
 }

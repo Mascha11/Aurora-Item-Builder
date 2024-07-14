@@ -74,7 +74,7 @@
                                                             _WEAPON_PROFICIENCY_
                                                                 _JAVELIN
                                                                 _MARTIAL_WEAPONS
-                                                            _ARMOR_PROFICIENCY_
+                                                            _ARMOR_PROFICIENCY_  >>"SHIELDS" and "SHIELD"...
                                                                 _CHAIN_SHIRT
                                                             _TOOL_PROFICIENCY_
                                                                 _BREWERS_SUPPLIES
