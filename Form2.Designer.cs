@@ -37,6 +37,8 @@
             RuleBuilderValue = new NumericUpDown();
             listBox1 = new ListBox();
             RuleBuilder5 = new ComboBox();
+            richTextBox1 = new RichTextBox();
+            deleteRule = new Button();
             ((System.ComponentModel.ISupportInitialize)RuleBuilderValue).BeginInit();
             SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             // RuleBuilder2
             // 
             RuleBuilder2.FormattingEnabled = true;
-            RuleBuilder2.Location = new Point(12, 74);
+            RuleBuilder2.Location = new Point(12, 75);
             RuleBuilder2.Name = "RuleBuilder2";
             RuleBuilder2.Size = new Size(212, 38);
             RuleBuilder2.TabIndex = 2;
@@ -62,7 +64,7 @@
             // RuleBuilder3
             // 
             RuleBuilder3.FormattingEnabled = true;
-            RuleBuilder3.Location = new Point(12, 136);
+            RuleBuilder3.Location = new Point(12, 138);
             RuleBuilder3.Name = "RuleBuilder3";
             RuleBuilder3.Size = new Size(212, 38);
             RuleBuilder3.TabIndex = 3;
@@ -71,7 +73,7 @@
             // RuleBuilder4
             // 
             RuleBuilder4.FormattingEnabled = true;
-            RuleBuilder4.Location = new Point(12, 198);
+            RuleBuilder4.Location = new Point(12, 201);
             RuleBuilder4.Name = "RuleBuilder4";
             RuleBuilder4.Size = new Size(212, 38);
             RuleBuilder4.TabIndex = 4;
@@ -97,7 +99,7 @@
             // 
             // RuleBuilderValue
             // 
-            RuleBuilderValue.Location = new Point(12, 328);
+            RuleBuilderValue.Location = new Point(12, 327);
             RuleBuilderValue.Name = "RuleBuilderValue";
             RuleBuilderValue.Size = new Size(210, 35);
             RuleBuilderValue.TabIndex = 8;
@@ -115,17 +117,38 @@
             // RuleBuilder5
             // 
             RuleBuilder5.FormattingEnabled = true;
-            RuleBuilder5.Location = new Point(12, 260);
+            RuleBuilder5.Location = new Point(12, 264);
             RuleBuilder5.Name = "RuleBuilder5";
             RuleBuilder5.Size = new Size(212, 38);
             RuleBuilder5.TabIndex = 10;
             RuleBuilder5.Visible = false;
+            RuleBuilder5.SelectionChangeCommitted += RuleBuilder5_SelectionChangeCommitted;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(12, 710);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(776, 232);
+            richTextBox1.TabIndex = 11;
+            richTextBox1.Text = "";
+            // 
+            // deleteRule
+            // 
+            deleteRule.Location = new Point(320, 380);
+            deleteRule.Name = "deleteRule";
+            deleteRule.Size = new Size(131, 40);
+            deleteRule.TabIndex = 12;
+            deleteRule.Text = "Delete Item";
+            deleteRule.UseVisualStyleBackColor = true;
+            deleteRule.Click += deleteRule_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 716);
+            ClientSize = new Size(800, 954);
+            Controls.Add(deleteRule);
+            Controls.Add(richTextBox1);
             Controls.Add(RuleBuilder5);
             Controls.Add(listBox1);
             Controls.Add(RuleBuilderValue);
@@ -151,5 +174,7 @@
         private NumericUpDown RuleBuilderValue;
         private ListBox listBox1;
         private ComboBox RuleBuilder5;
+        private RichTextBox richTextBox1;
+        private Button deleteRule;
     }
 }

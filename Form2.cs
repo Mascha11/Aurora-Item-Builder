@@ -20,6 +20,7 @@ namespace Aurora_Item_Builder
         private string Rule2;
         private string Rule3;
         private string Rule4;
+        private string Rule5;
         private string RuleValue;
         private List<string> RulesList;
         public Form2()
@@ -32,7 +33,14 @@ namespace Aurora_Item_Builder
         {
             Rule1 = RuleBuilder1.SelectedItem?.ToString();
             RuleBuilder1.Text = Rule1;
+            RuleBuilder2.Text = "";
+            RuleBuilder3.Text = "";
+            RuleBuilder4.Text = "";
+            RuleBuilder5.Text = "";
             RuleBuilder2.Items.Clear();
+            RuleBuilder3.Items.Clear();
+            RuleBuilder4.Items.Clear();
+            RuleBuilder5.Items.Clear();
             if (Rule1 == "change stat")
             {
                 RuleBuilder2.Items.Add("Speed");
@@ -59,7 +67,11 @@ namespace Aurora_Item_Builder
         {
             Rule2 = RuleBuilder2.SelectedItem?.ToString();
             RuleBuilder3.Text = "";
+            RuleBuilder4.Text = "";
+            RuleBuilder5.Text = "";
             RuleBuilder3.Items.Clear();
+            RuleBuilder4.Items.Clear();
+            RuleBuilder5.Items.Clear();
             if (Rule2 == "Speed")
             {
                 RuleBuilder4.Visible = false;
@@ -72,6 +84,7 @@ namespace Aurora_Item_Builder
             }
             if (Rule2 == "Ability")
             {
+                RuleBuilderValue.Visible = true;
                 RuleBuilder3.Items.Add("set Score");
                 RuleBuilder3.Items.Add("add to Score");
                 RuleBuilder3.Items.Add("change max Score");
@@ -106,7 +119,8 @@ namespace Aurora_Item_Builder
                 RuleBuilder3.Items.Add("More...");
             }
             if (Rule2 == "Grant Condition")
-            {   //RuleBuilder4.Visible=false;
+            {
+                RuleBuilder4.Visible = true;
                 RuleBuilder3.Items.Add("Damage Immunity");
                 RuleBuilder3.Items.Add("Damage Resistance");
                 RuleBuilder3.Items.Add("Damage Vulnerability");
@@ -144,7 +158,12 @@ namespace Aurora_Item_Builder
             Rule3 = RuleBuilder3.SelectedItem?.ToString();
             string CheckRule2 = Rule2;
             RuleBuilder4.Text = "";
-            if (Rule2 != "Grant Condition" ) { RuleBuilder4.Items.Clear(); }
+            RuleBuilder5.Text = "";
+            if (Rule2 != "Grant Condition")
+            {
+                RuleBuilder4.Items.Clear();
+                RuleBuilder5.Items.Clear();
+            }
             if (RuleBuilder3.SelectedItem != null)
             {
                 //richTextBox1.AppendText(RuleBuilder3.SelectedItem.ToString() + Environment.NewLine);
@@ -236,6 +255,11 @@ namespace Aurora_Item_Builder
                 RuleBuilder5.Items.AddRange(selectedTools.ToArray());
             }
         }
+        private void RuleBuilder5_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Rule5 = RuleBuilder5.SelectedItem?.ToString();
+            richTextBox1.AppendText(RuleBuilder5.SelectedItem.ToString() + Environment.NewLine);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -326,12 +350,88 @@ namespace Aurora_Item_Builder
                 }
             }
 
-            if (CheckRule1 == "grant something") { BuildStrPt1 = "<grant type="; }
+            if (CheckRule1 == "grant something")
+            {
+
+                BuildStrPt1 = "<grant type=";
+
+                if (CheckRule2 == "Grant Condition")
+                {
+                    BuildStrPt2 = " \"Condition\" " + "id=\"ID_INTERNAL_CONDITION_";
+                    if (CheckRule3 == "Damage Immunity")
+                    {
+                        BuildStrPt3 = "DAMAGE_IMMUNITY_";
+                        string formattedRule4 = Rule4.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule4 + "\"";
+                    }
+                    if (CheckRule3 == "Damage Resistance")
+                    {
+                        BuildStrPt3 = "DAMAGE_RESISTANCE_";
+                        string formattedRule4 = Rule4.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule4 + "\"";
+                    }
+                    if (CheckRule3 == "Damage Vulnerability")
+                    {
+                        BuildStrPt3 = "VULNERABILITY_";
+                        string formattedRule4 = Rule4.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule4 + "\"";
+                    }
+                }
+                if (CheckRule2 == "Grant Proficiency")
+                {
+                    BuildStrPt2 = " \"Proficiency\" " + "id=\"ID_PROFICIENCY_";
+
+                    if (CheckRule3 == "Skill")
+                    {
+                        BuildStrPt3 = "SKILL_";
+                        string formattedRule4 = Rule4.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule4 + "\"";
+                    }
+                    if (CheckRule3 == "Gaming Set")
+                    {
+                        BuildStrPt3 = "GAMING_SET_PROFICIENCY_";
+                        string formattedRule4 = Rule4.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule4 + "\"";
+                    }
+                    if (CheckRule3 == "Weapon")
+                    {
+                        BuildStrPt3 = "WEAPON_PROFICIENCY_";
+                        string formattedRule4 = Rule4.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule4 + "\"";
+                    }
+                    if (CheckRule3 == "Armor")
+                    {
+                        BuildStrPt3 = "ARMOR_PROFICIENCY_";
+                        string formattedRule4 = Rule4.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule4 + "\"";
+                    }
+                    if (CheckRule3 == "Tool")
+                    {
+                        BuildStrPt3 = "TOOL_PROFICIENCY_";
+                        string formattedRule5 = Rule5.ToUpper().Replace(' ', '_');
+                        BuildStrPt4 = formattedRule5 + "\"";
+                    }
+
+                }
+                if (CheckRule2 == "Grant Vision")
+                {
+                    string formattedRule3 = Rule3.ToUpper().Replace(' ', '_');
+                    BuildStrPt2 = " \"Vision\" " + "id=\"ID_VISION_" + formattedRule3 + "\"";
+                }
+                if (CheckRule2 == "Grant Language")
+                {
+                    string formattedRule3 = Rule3.ToUpper().Replace(' ', '_');
+                    BuildStrPt2 = " \"Language\" " + "id=\"ID_LANGUAGE_" + formattedRule3 + "\"";
+                }
+
+            }
 
 
             //Part4
-            BuildStrPt4 = " value=\"" + RuleValue + "\"";
-
+            if (CheckRule1 == "change stat")
+            {
+                BuildStrPt4 = " value=\"" + RuleValue + "\"";
+            }
             //Part 5
             BuildStrPt5 = " bonus=\"base\"";
 
@@ -372,6 +472,27 @@ namespace Aurora_Item_Builder
         private void RuleBuilderValue_ValueChanged(object sender, EventArgs e)
         {
             RuleValue = RuleBuilderValue.Text;
+        }
+
+        private void deleteRule_Click(object sender, EventArgs e)
+        {
+            // Check if an item is selected
+            if (listBox1.SelectedItem != null)
+            {
+                // Get the selected item
+                string selectedItem = listBox1.SelectedItem.ToString();
+
+                // Remove the selected item from the ListBox
+                listBox1.Items.Remove(selectedItem);
+
+                // Remove the selected item from the underlying data source
+                RulesList.Remove(selectedItem);
+            }
+            else
+            {
+                // Optionally handle the case where no item is selected
+                MessageBox.Show("Please select an item to delete.");
+            }
         }
     }
 
