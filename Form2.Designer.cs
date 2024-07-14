@@ -32,9 +32,11 @@
             RuleBuilder2 = new ComboBox();
             RuleBuilder3 = new ComboBox();
             RuleBuilder4 = new ComboBox();
-            richTextBox1 = new RichTextBox();
             richTextBox2 = new RichTextBox();
             button1 = new Button();
+            RuleBuilderValue = new NumericUpDown();
+            listBox1 = new ListBox();
+            ((System.ComponentModel.ISupportInitialize)RuleBuilderValue).BeginInit();
             SuspendLayout();
             // 
             // RuleBuilder1
@@ -74,19 +76,11 @@
             RuleBuilder4.TabIndex = 4;
             RuleBuilder4.SelectionChangeCommitted += RuleBuilder4_SelectionChangeCommitted;
             // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(457, 12);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(315, 454);
-            richTextBox1.TabIndex = 5;
-            richTextBox1.Text = "";
-            // 
             // richTextBox2
             // 
             richTextBox2.Location = new Point(12, 472);
             richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(760, 232);
+            richTextBox2.Size = new Size(776, 232);
             richTextBox2.TabIndex = 6;
             richTextBox2.Text = "";
             // 
@@ -100,20 +94,39 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // RuleBuilderValue
+            // 
+            RuleBuilderValue.Location = new Point(12, 260);
+            RuleBuilderValue.Name = "RuleBuilderValue";
+            RuleBuilderValue.Size = new Size(210, 35);
+            RuleBuilderValue.TabIndex = 8;
+            RuleBuilderValue.ValueChanged += RuleBuilderValue_ValueChanged;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 30;
+            listBox1.Location = new Point(457, 12);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(331, 454);
+            listBox1.TabIndex = 9;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 716);
+            Controls.Add(listBox1);
+            Controls.Add(RuleBuilderValue);
             Controls.Add(button1);
             Controls.Add(richTextBox2);
-            Controls.Add(richTextBox1);
             Controls.Add(RuleBuilder4);
             Controls.Add(RuleBuilder3);
             Controls.Add(RuleBuilder2);
             Controls.Add(RuleBuilder1);
             Name = "Form2";
             Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)RuleBuilderValue).EndInit();
             ResumeLayout(false);
         }
 
@@ -122,8 +135,9 @@
         private ComboBox RuleBuilder2;
         private ComboBox RuleBuilder3;
         private ComboBox RuleBuilder4;
-        private RichTextBox richTextBox1;
         private RichTextBox richTextBox2;
         private Button button1;
+        private NumericUpDown RuleBuilderValue;
+        private ListBox listBox1;
     }
 }

@@ -20,10 +20,12 @@ namespace Aurora_Item_Builder
         private string Rule2;
         private string Rule3;
         private string Rule4;
+        private string RuleValue;
+        private List<string> RulesList;
         public Form2()
         {
             InitializeComponent();
-
+            RulesList = new List<string>();
         }
 
         private void RuleBuilder1_SelectionChangeCommitted(object sender, EventArgs e)
@@ -58,10 +60,13 @@ namespace Aurora_Item_Builder
             RuleBuilder3.Items.Clear();
             if (Rule2 == "Speed")
             {
+                RuleBuilder4.Visible = false;
                 RuleBuilder3.Items.Add("Base");
                 RuleBuilder3.Items.Add("Swim");
                 RuleBuilder3.Items.Add("Climb");
                 RuleBuilder3.Items.Add("Fly");
+                RuleBuilderValue.Minimum = 0;
+                RuleBuilderValue.Maximum = 100;
             }
             if (Rule2 == "Ability")
             {
@@ -71,11 +76,15 @@ namespace Aurora_Item_Builder
             }
             if (Rule2 == "Vision")
             {
+                RuleBuilder4.Visible = false;
                 RuleBuilder3.Items.Add("Darkvision");
                 RuleBuilder3.Items.Add("Blindsight");
                 RuleBuilder3.Items.Add("Truesight");
                 RuleBuilder3.Items.Add("Tremorsense");
                 RuleBuilder3.Items.Add("Mindsight");
+                RuleBuilderValue.Minimum = 0;
+                RuleBuilderValue.Maximum = 100;
+
             }
             if (Rule2 == "Check")
             {
@@ -107,7 +116,7 @@ namespace Aurora_Item_Builder
             RuleBuilder4.Items.Clear();
             if (RuleBuilder3.SelectedItem != null)
             {
-                richTextBox1.AppendText(RuleBuilder3.SelectedItem.ToString() + Environment.NewLine);
+                //richTextBox1.AppendText(RuleBuilder3.SelectedItem.ToString() + Environment.NewLine);
             }
 
             if (Rule3 == "set Score" || Rule3 == "add to Score" || Rule3 == "change max Score")
@@ -160,6 +169,9 @@ namespace Aurora_Item_Builder
             string BuildStrPt1 = string.Empty;
             string BuildStrPt2 = string.Empty;
             string BuildStrPt3 = string.Empty;
+            string BuildStrPt4 = string.Empty;
+            string BuildStrPt5 = string.Empty;
+            string FullString = string.Empty;
             if (CheckRule1 == "change stat")
             {
                 BuildStrPt1 = "<stat name=";
@@ -200,7 +212,7 @@ namespace Aurora_Item_Builder
                     }
                     if (CheckRule3 == "Skill")
                     {
-                        BuildStrPt2 = "\"" + convRule4 + ":misc";
+                        BuildStrPt2 = "\"" + convRule4 + ":misc\"";
                     }
                     if (CheckRule3 == "Spell")
                     {
@@ -233,14 +245,35 @@ namespace Aurora_Item_Builder
 
             if (CheckRule1 == "grant something") { BuildStrPt1 = "<grant type="; }
 
+
+            //Part4
+            BuildStrPt4 = " value=\"" + RuleValue + "\"";
+
+            //Part 5
+            BuildStrPt5 = " bonus=\"base\"";
+
             StringBuilder output = new StringBuilder();
             //output.AppendLine("<rules>");
-            output.AppendLine(BuildStrPt1 + BuildStrPt2 + BuildStrPt3);
-
+            if (CheckRule2 == "Speed" || CheckRule2 == "Vision")
+            {
+                output.AppendLine(BuildStrPt1 + BuildStrPt2 + BuildStrPt3 + BuildStrPt4 + BuildStrPt5 + "/>");
+                FullString = BuildStrPt1 + BuildStrPt2 + BuildStrPt3 + BuildStrPt4 + BuildStrPt5 + "/>";
+            }
+            else
+            {
+                output.AppendLine(BuildStrPt1 + BuildStrPt2 + BuildStrPt3 + BuildStrPt4 + "/>");
+                FullString = BuildStrPt1 + BuildStrPt2 + BuildStrPt3 + BuildStrPt4 + "/>";
+            }
             richTextBox2.Text = output.ToString();
+            RulesList.Add(FullString);
+            listBox1.Items.Clear();
+            foreach (string rule in RulesList)
+            {
+                listBox1.Items.Add(rule);
+            }
 
             //var Debugging:
-            StringBuilder Text1 = new StringBuilder();
+            /*StringBuilder Text1 = new StringBuilder();
             Text1.AppendLine("Test");
             Text1.AppendLine(CheckRule1);
             Text1.AppendLine(CheckRule2);
@@ -248,15 +281,20 @@ namespace Aurora_Item_Builder
             Text1.AppendLine(CheckRule4);
             Text1.AppendLine(convRule3);
             Text1.AppendLine(convRule4);
-            richTextBox1.Text = Text1.ToString();
+            richTextBox1.Text = Text1.ToString();*/
         }
 
         private void RuleBuilder4_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Rule4 = RuleBuilder4.SelectedItem?.ToString();
+           /* Rule4 = RuleBuilder4.SelectedItem?.ToString();
             richTextBox1.AppendText(RuleBuilder4.SelectedItem.ToString() + Environment.NewLine);
-            richTextBox1.AppendText(Rule4 + Environment.NewLine);
+            richTextBox1.AppendText(Rule4 + Environment.NewLine);*/
 
+        }
+
+        private void RuleBuilderValue_ValueChanged(object sender, EventArgs e)
+        {
+            RuleValue = RuleBuilderValue.Text;
         }
     }
 
