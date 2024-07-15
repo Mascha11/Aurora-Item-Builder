@@ -103,6 +103,7 @@
             RuleBuilderValue.Name = "RuleBuilderValue";
             RuleBuilderValue.Size = new Size(210, 35);
             RuleBuilderValue.TabIndex = 8;
+            RuleBuilderValue.Visible = false;
             RuleBuilderValue.ValueChanged += RuleBuilderValue_ValueChanged;
             // 
             // listBox1

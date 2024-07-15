@@ -21,7 +21,7 @@ namespace Aurora_Item_Builder
         private string Rule3;
         private string Rule4;
         private string Rule5;
-        private string RuleValue;
+        private int RuleValue;
         private List<string> RulesList;
         public Form2()
         {
@@ -41,8 +41,11 @@ namespace Aurora_Item_Builder
             RuleBuilder3.Items.Clear();
             RuleBuilder4.Items.Clear();
             RuleBuilder5.Items.Clear();
+            RuleBuilder4.Visible = false;
+            RuleBuilder5.Visible = false;
             if (Rule1 == "change stat")
             {
+                RuleBuilderValue.Visible = true;
                 RuleBuilder2.Items.Add("Speed");
                 RuleBuilder2.Items.Add("Ability");
                 RuleBuilder2.Items.Add("Vision");
@@ -72,6 +75,8 @@ namespace Aurora_Item_Builder
             RuleBuilder3.Items.Clear();
             RuleBuilder4.Items.Clear();
             RuleBuilder5.Items.Clear();
+            RuleBuilder3.Visible = true;
+            RuleBuilder4.Visible =true;
             if (Rule2 == "Speed")
             {
                 RuleBuilder4.Visible = false;
@@ -107,6 +112,7 @@ namespace Aurora_Item_Builder
             }
             if (Rule2 == "Damage")
             {
+                RuleBuilder4.Visible= false;
                 RuleBuilder3.Items.Add("Longbow");
                 RuleBuilder3.Items.Add("Shortbow");
                 RuleBuilder3.Items.Add("Melee");
@@ -117,6 +123,11 @@ namespace Aurora_Item_Builder
                 RuleBuilder3.Items.Add("Lifedrinker");
                 RuleBuilder3.Items.Add("Natural");
                 RuleBuilder3.Items.Add("More...");
+            }
+            if (Rule2 == "Initiative" || Rule2 == "AC")
+            {
+                RuleBuilder3.Visible = false;
+                RuleBuilder4.Visible = false;
             }
             if (Rule2 == "Grant Condition")
             {
@@ -139,6 +150,7 @@ namespace Aurora_Item_Builder
             }
             if (Rule2 == "Grant Vision")
             {
+                RuleBuilder4.Visible = false;
                 string VisionString = Properties.Resources.Vision;
                 List<string> visionList = VisionString.Split(',').ToList();
                 RuleBuilder3.Items.AddRange(visionList.ToArray());
@@ -430,7 +442,14 @@ namespace Aurora_Item_Builder
             //Part4
             if (CheckRule1 == "change stat")
             {
-                BuildStrPt4 = " value=\"" + RuleValue + "\"";
+                if (RuleValue != null)
+                {
+                    BuildStrPt4 = " value=\"" + RuleValue + "\"";
+                }
+                else
+                {
+                    BuildStrPt4 = " value=\"" + 0 + "\"";
+                }
             }
             //Part 5
             BuildStrPt5 = " bonus=\"base\"";
@@ -471,7 +490,7 @@ namespace Aurora_Item_Builder
 
         private void RuleBuilderValue_ValueChanged(object sender, EventArgs e)
         {
-            RuleValue = RuleBuilderValue.Text;
+            RuleValue = Convert.ToInt32(Math.Round(RuleBuilderValue.Value, 0)); ;
         }
 
         private void deleteRule_Click(object sender, EventArgs e)

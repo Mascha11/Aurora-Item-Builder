@@ -33,7 +33,7 @@
             SelectTypeCB = new ComboBox();
             SelectSourceTI = new TextBox();
             SelectAuthorTI = new TextBox();
-            Field6 = new RichTextBox();
+            descriptionInput = new RichTextBox();
             SelectCatCB = new ComboBox();
             SelectCostNI = new NumericUpDown();
             SelectCurrencyCB = new ComboBox();
@@ -57,7 +57,7 @@
             label6 = new Label();
             SelectAttuneTL = new CheckedListBox();
             label7 = new Label();
-            weight = new Label();
+            WeightLabel = new Label();
             label8 = new Label();
             label9 = new Label();
             SelectRarityCB = new ComboBox();
@@ -108,7 +108,7 @@
             SelectNameTI.Size = new Size(175, 35);
             SelectNameTI.TabIndex = 0;
             SelectNameTI.Text = "Item Name";
-            SelectNameTI.TextChanged += textBox1_TextChanged;
+            SelectNameTI.TextChanged += SelectNameTI_TextChanged;
             // 
             // SelectTypeCB
             // 
@@ -118,7 +118,7 @@
             SelectTypeCB.TabIndex = 2;
             SelectTypeCB.Text = "Choose Type";
             toolTip1.SetToolTip(SelectTypeCB, "Choose what Type you want to add");
-            SelectTypeCB.DrawItem += SelectTypeCB_DrawItem;
+            SelectTypeCB.SelectionChangeCommitted += SelectTypeCB_SelectionChangeCommitted;
             // 
             // SelectSourceTI
             // 
@@ -127,6 +127,7 @@
             SelectSourceTI.Size = new Size(175, 35);
             SelectSourceTI.TabIndex = 3;
             SelectSourceTI.Text = "Name of Source";
+            SelectSourceTI.TextChanged += SelectSourceTI_TextChanged;
             // 
             // SelectAuthorTI
             // 
@@ -135,14 +136,16 @@
             SelectAuthorTI.Size = new Size(175, 35);
             SelectAuthorTI.TabIndex = 4;
             SelectAuthorTI.Text = "Author";
+            SelectAuthorTI.TextChanged += SelectAuthorTI_TextChanged;
             // 
-            // Field6
+            // descriptionInput
             // 
-            Field6.Location = new Point(21, 77);
-            Field6.Name = "Field6";
-            Field6.Size = new Size(1367, 128);
-            Field6.TabIndex = 5;
-            Field6.Text = "Description";
+            descriptionInput.Location = new Point(21, 77);
+            descriptionInput.Name = "descriptionInput";
+            descriptionInput.Size = new Size(1367, 128);
+            descriptionInput.TabIndex = 5;
+            descriptionInput.Text = "Description";
+            descriptionInput.TextChanged += descriptionInput_TextChanged;
             // 
             // SelectCatCB
             // 
@@ -153,6 +156,7 @@
             SelectCatCB.Size = new Size(354, 38);
             SelectCatCB.TabIndex = 6;
             SelectCatCB.Text = "Shop Category";
+            SelectCatCB.SelectionChangeCommitted += SelectCatCB_SelectionChangeCommitted;
             // 
             // SelectCostNI
             // 
@@ -161,6 +165,7 @@
             SelectCostNI.Name = "SelectCostNI";
             SelectCostNI.Size = new Size(210, 35);
             SelectCostNI.TabIndex = 7;
+            SelectCostNI.ValueChanged += SelectCostNI_ValueChanged;
             // 
             // SelectCurrencyCB
             // 
@@ -171,6 +176,7 @@
             SelectCurrencyCB.Size = new Size(61, 38);
             SelectCurrencyCB.TabIndex = 8;
             SelectCurrencyCB.Text = "GP";
+            SelectCurrencyCB.SelectionChangeCommitted += SelectCurrencyCB_SelectionChangeCommitted;
             // 
             // SelectWeightNI
             // 
@@ -179,6 +185,7 @@
             SelectWeightNI.Name = "SelectWeightNI";
             SelectWeightNI.Size = new Size(136, 35);
             SelectWeightNI.TabIndex = 9;
+            SelectWeightNI.ValueChanged += SelectWeightNI_ValueChanged;
             // 
             // toolTip1
             // 
@@ -203,6 +210,7 @@
             SelectFocusCB.Size = new Size(212, 38);
             SelectFocusCB.TabIndex = 12;
             SelectFocusCB.Text = "Type of Focus";
+            SelectFocusCB.SelectionChangeCommitted += SelectFocusCB_SelectionChangeCommitted;
             // 
             // SelectSlotTL
             // 
@@ -212,6 +220,7 @@
             SelectSlotTL.Name = "SelectSlotTL";
             SelectSlotTL.Size = new Size(209, 100);
             SelectSlotTL.TabIndex = 13;
+            SelectSlotTL.SelectedValueChanged += SelectSlotTL_SelectedValueChanged;
             // 
             // label1
             // 
@@ -229,6 +238,7 @@
             SelectNormalRangeNI.Name = "SelectNormalRangeNI";
             SelectNormalRangeNI.Size = new Size(90, 35);
             SelectNormalRangeNI.TabIndex = 15;
+            SelectNormalRangeNI.ValueChanged += SelectNormalRangeNI_ValueChanged;
             // 
             // label2
             // 
@@ -246,6 +256,7 @@
             SelectLongRangeNI.Name = "SelectLongRangeNI";
             SelectLongRangeNI.Size = new Size(96, 35);
             SelectLongRangeNI.TabIndex = 17;
+            SelectLongRangeNI.ValueChanged += SelectLongRangeNI_ValueChanged;
             // 
             // label3
             // 
@@ -263,6 +274,7 @@
             SelectNumberDiceNI.Name = "SelectNumberDiceNI";
             SelectNumberDiceNI.Size = new Size(81, 35);
             SelectNumberDiceNI.TabIndex = 19;
+            SelectNumberDiceNI.ValueChanged += SelectNumberDiceNI_ValueChanged;
             // 
             // SelectDmgDiceCB
             // 
@@ -272,6 +284,7 @@
             SelectDmgDiceCB.Name = "SelectDmgDiceCB";
             SelectDmgDiceCB.Size = new Size(69, 38);
             SelectDmgDiceCB.TabIndex = 20;
+            SelectDmgDiceCB.SelectionChangeCommitted += SelectDmgDiceCB_SelectionChangeCommitted;
             // 
             // SelectDmgModNI
             // 
@@ -280,6 +293,7 @@
             SelectDmgModNI.Name = "SelectDmgModNI";
             SelectDmgModNI.Size = new Size(90, 35);
             SelectDmgModNI.TabIndex = 21;
+            SelectDmgModNI.ValueChanged += SelectDmgModNI_ValueChanged;
             // 
             // SelectDmgTypeCB
             // 
@@ -289,6 +303,7 @@
             SelectDmgTypeCB.Name = "SelectDmgTypeCB";
             SelectDmgTypeCB.Size = new Size(252, 38);
             SelectDmgTypeCB.TabIndex = 22;
+            SelectDmgTypeCB.SelectedIndexChanged += SelectDmgTypeCB_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -316,6 +331,7 @@
             SelectItemTypeCB.Name = "SelectItemTypeCB";
             SelectItemTypeCB.Size = new Size(212, 38);
             SelectItemTypeCB.TabIndex = 25;
+            SelectItemTypeCB.SelectionChangeCommitted += SelectItemTypeCB_SelectionChangeCommitted;
             // 
             // label6
             // 
@@ -334,7 +350,7 @@
             SelectAttuneTL.Name = "SelectAttuneTL";
             SelectAttuneTL.Size = new Size(212, 196);
             SelectAttuneTL.TabIndex = 27;
-            SelectAttuneTL.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
+            SelectAttuneTL.SelectedValueChanged += SelectAttuneTL_SelectedValueChanged;
             // 
             // label7
             // 
@@ -345,15 +361,15 @@
             label7.TabIndex = 28;
             label7.Text = "Cost";
             // 
-            // weight
+            // WeightLabel
             // 
-            weight.AutoSize = true;
-            weight.Location = new Point(398, 216);
-            weight.Name = "weight";
-            weight.Size = new Size(79, 30);
-            weight.TabIndex = 29;
-            weight.Text = "Weight";
-            weight.TextAlign = ContentAlignment.TopCenter;
+            WeightLabel.AutoSize = true;
+            WeightLabel.Location = new Point(373, 216);
+            WeightLabel.Name = "WeightLabel";
+            WeightLabel.Size = new Size(133, 30);
+            WeightLabel.TabIndex = 29;
+            WeightLabel.Text = "Enter Weight";
+            WeightLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // label8
             // 
@@ -381,6 +397,7 @@
             SelectRarityCB.Name = "SelectRarityCB";
             SelectRarityCB.Size = new Size(212, 38);
             SelectRarityCB.TabIndex = 32;
+            SelectRarityCB.SelectionChangeCommitted += SelectRarityCB_SelectionChangeCommitted;
             // 
             // label10
             // 
@@ -399,6 +416,7 @@
             SelectEnhanceCB.Name = "SelectEnhanceCB";
             SelectEnhanceCB.Size = new Size(66, 38);
             SelectEnhanceCB.TabIndex = 34;
+            SelectEnhanceCB.SelectionChangeCommitted += SelectEnhanceCB_SelectionChangeCommitted;
             // 
             // label11
             // 
@@ -417,6 +435,7 @@
             SelectWpnTagTL.Name = "SelectWpnTagTL";
             SelectWpnTagTL.Size = new Size(568, 196);
             SelectWpnTagTL.TabIndex = 38;
+            SelectWpnTagTL.SelectedValueChanged += SelectWpnTagTL_SelectedValueChanged;
             // 
             // label12
             // 
@@ -435,6 +454,7 @@
             SelectArmorTypeCB.Name = "SelectArmorTypeCB";
             SelectArmorTypeCB.Size = new Size(516, 38);
             SelectArmorTypeCB.TabIndex = 40;
+            SelectArmorTypeCB.SelectionChangeCommitted += SelectArmorTypeCB_SelectionChangeCommitted;
             // 
             // ImprovementCheck
             // 
@@ -456,7 +476,7 @@
             SelectImprovementTagTL.Size = new Size(516, 132);
             SelectImprovementTagTL.TabIndex = 43;
             SelectImprovementTagTL.Visible = false;
-            SelectImprovementTagTL.SelectedIndexChanged += Field27_SelectedIndexChanged;
+            SelectImprovementTagTL.SelectedValueChanged += SelectImprovementTagTL_SelectedValueChanged;
             // 
             // label13
             // 
@@ -483,6 +503,7 @@
             SelectACModNI.Name = "SelectACModNI";
             SelectACModNI.Size = new Size(57, 35);
             SelectACModNI.TabIndex = 46;
+            SelectACModNI.ValueChanged += SelectACModNI_ValueChanged;
             // 
             // toolTip2
             // 
@@ -497,6 +518,7 @@
             SelectACFlatNI.Size = new Size(69, 35);
             SelectACFlatNI.TabIndex = 47;
             SelectACFlatNI.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            SelectACFlatNI.ValueChanged += SelectACFlatNI_ValueChanged;
             // 
             // SelectArmorAbilCB
             // 
@@ -506,6 +528,7 @@
             SelectArmorAbilCB.Name = "SelectArmorAbilCB";
             SelectArmorAbilCB.Size = new Size(238, 38);
             SelectArmorAbilCB.TabIndex = 48;
+            SelectArmorAbilCB.SelectionChangeCommitted += SelectArmorAbilCB_SelectionChangeCommitted;
             // 
             // ArmorAbilCheck
             // 
@@ -534,6 +557,7 @@
             SelectACAbilModMaxNI.Name = "SelectACAbilModMaxNI";
             SelectACAbilModMaxNI.Size = new Size(64, 35);
             SelectACAbilModMaxNI.TabIndex = 51;
+            SelectACAbilModMaxNI.ValueChanged += SelectACAbilModMaxNI_ValueChanged;
             // 
             // SelectCustomNameAddTI
             // 
@@ -542,6 +566,7 @@
             SelectCustomNameAddTI.Size = new Size(175, 35);
             SelectCustomNameAddTI.TabIndex = 52;
             SelectCustomNameAddTI.Text = "own Name";
+            SelectCustomNameAddTI.TextChanged += SelectCustomNameAddTI_TextChanged;
             // 
             // NameAddCheck
             // 
@@ -570,6 +595,7 @@
             SelectNameAddCB.Name = "SelectNameAddCB";
             SelectNameAddCB.Size = new Size(201, 38);
             SelectNameAddCB.TabIndex = 55;
+            SelectNameAddCB.SelectionChangeCommitted += SelectNameAddCB_SelectionChangeCommitted;
             // 
             // SelectArmorStealthModCB
             // 
@@ -579,6 +605,7 @@
             SelectArmorStealthModCB.Name = "SelectArmorStealthModCB";
             SelectArmorStealthModCB.Size = new Size(344, 38);
             SelectArmorStealthModCB.TabIndex = 56;
+            SelectArmorStealthModCB.SelectionChangeCommitted += SelectArmorStealthModCB_SelectionChangeCommitted;
             // 
             // StealthChangeCheck
             // 
@@ -606,6 +633,7 @@
             SelectChargesNI.Name = "SelectChargesNI";
             SelectChargesNI.Size = new Size(71, 35);
             SelectChargesNI.TabIndex = 59;
+            SelectChargesNI.ValueChanged += SelectChargesNI_ValueChanged;
             // 
             // Field38
             // 
@@ -670,7 +698,7 @@
             Controls.Add(SelectRarityCB);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(weight);
+            Controls.Add(WeightLabel);
             Controls.Add(label7);
             Controls.Add(SelectAttuneTL);
             Controls.Add(label6);
@@ -693,7 +721,7 @@
             Controls.Add(SelectCurrencyCB);
             Controls.Add(SelectCostNI);
             Controls.Add(SelectCatCB);
-            Controls.Add(Field6);
+            Controls.Add(descriptionInput);
             Controls.Add(SelectAuthorTI);
             Controls.Add(SelectSourceTI);
             Controls.Add(SelectTypeCB);
@@ -720,7 +748,7 @@
         private ComboBox SelectTypeCB;
         private TextBox SelectSourceTI;
         private TextBox SelectAuthorTI;
-        private RichTextBox Field6;
+        private RichTextBox descriptionInput;
         private ComboBox SelectCatCB;
         private NumericUpDown SelectCostNI;
         private ComboBox SelectCurrencyCB;
@@ -744,7 +772,7 @@
         private Label label6;
         private CheckedListBox SelectAttuneTL;
         private Label label7;
-        private Label weight;
+        private Label WeightLabel;
         private Label label8;
         private Label label9;
         private ComboBox SelectRarityCB;
